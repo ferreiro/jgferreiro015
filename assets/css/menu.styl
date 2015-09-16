@@ -1,0 +1,186 @@
+.menuTop
+   width: 100%;
+   background: rgba(255,255,255,0.9);
+   height: 75px; 
+   position: fixed;
+   z-index: 100;
+   rigth:0;
+   top:0;
+
+   &-int
+      margin:0;
+      margin-right: 2em; 
+      height:100%; 
+      text-align: right; 
+
+   // Basic box for new elements
+   &-box
+      display: inline-block;
+      height: 75px;
+
+   // Hidden until header dissapeared
+   &-logo
+      width:200px;
+      height:75px;
+      margin:0 auto;
+      position:absolute;
+      left:50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+
+   // contact button
+   &-contact
+      float:left;
+      margin-left:1em;
+      padding:1.3em 1em;
+      margin-top:0.65em;
+      -webkit-box-shadow: inset 0px 0px 0px 3px rgba(219,219,219,1);
+      -moz-box-shadow: inset 0px 0px 0px 3px rgba(219,219,219,1);
+      box-shadow: inset 0px 0px 0px 3px rgba(219,219,219,1);
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      p
+         line-height:0;
+         margin:0;
+         padding:0;
+         margin-top:5px;
+
+   &-languages
+      margin:0;
+      padding:0;
+      display:block;
+      li
+         float:left;
+         margin-left:0.5em;
+         a
+            padding:1.4em 0;
+            display:block;
+
+   // Mobile menu button
+   &-button
+      width: 35px;
+      height: 75px;
+      z-index: 30;  
+      display: inline-block;
+      cursor: pointer;  
+      padding-left:1em;
+      background-size:40px auto;
+      background-position:100% 50%;
+      background-repeat:no-repeat;
+      background-image: url(../icons/menu.svg);
+
+
+
+
+.menu {
+   background: rgba(41,128,185,1);
+   background: #DCE3E8;
+   // padding-right: .25em;
+   position: fixed;
+   right: -18em;
+   // left: 0; // Only for debugging
+   top: 0;
+   padding-top: 75px;
+   box-sizing: border-box;
+   z-index: 20;
+   height: 100%;
+   -webkit-transition: all .3s;
+   -o-transition: all .3s;
+   transition: all .3s;
+
+}
+.menu.active { right: 0; }
+
+.menu ul { 
+   width: 240px;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   margin: auto;
+   /*outline: 1px solid red;*/
+   padding-left: 0; 
+} 
+.menu ul li {
+   margin: 0;
+   padding: 0;
+}
+.menu ul li {
+   box-shadow: 3px 0 rgba(52,152,219,.2) inset;
+   margin-bottom: 5px;
+   padding-left: .5em;
+   -webkit-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;/*outline: 1px solid green*/
+}
+.menu ul li a {
+   width: 100%;
+   background: url(menu.svg) no-repeat left top;
+   color: #ddd;
+   text-decoration: none; 
+   display: block; 
+   padding: 0.7em 0;
+}
+.menu ul li a p {
+   margin: 0;
+   padding: 0;
+   margin-left: 2em; 
+}
+.menu ul li a:hover p {
+   margin-left: 2em;
+   -webkit-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+}
+
+
+.menu li:hover { box-shadow: 15em 0 rgba(52,152,219,.2)inset; }
+
+.menu li:nth-child(1) a { padding-top: 1em; }
+.menu li:last-child   a { padding-bottom: 1em; }
+.menu li:nth-child(2) a { background-position: 0 -42px; }
+
+.menu li:nth-child(3) a { background-position: 0 -84px; }
+
+.menu li:nth-child(4) a { background-position: 0 -126px; }
+
+.menu li:nth-child(5) a { background-position: 0 -168px; }
+
+/*FIN MENUList*/
+/*Posicion Responsive MenuList*/
+
+ 
+
+.languages { 
+  background-size:cover;
+  cursor: pointer;
+  right: 2em;
+  height: 40px;
+  position: fixed;
+  top: 2em; 
+  z-index: 30; 
+  display: none;
+}
+.languages ul {
+  margin:0;
+  padding:0;
+}
+.languages ul li {
+  display:inline-block;
+}
+
+/***
+
+  Wrapper for move the content when the menu is shown.
+**/
+
+.mobile-wrapper {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.mobile-wrapper-active { 
+   margin-right:240px;
+}

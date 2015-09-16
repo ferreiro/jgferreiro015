@@ -1,0 +1,197 @@
+// Variables
+// Degine widths for differents devices
+tabletWidth = 600px
+desktopWidth = 800px
+
+// Texts
+textTitle = 36px;
+textSubtitle = 24px;
+textParagraph = 18px;
+textMargin = 20px;
+
+// Mixins
+ 
+body {
+	background #fff
+	font-size textParagraph
+	font-family Martel
+}
+
+li {
+	list-style:none;
+}
+
+h1, h2, h3, h4, a, li, ul, a
+	margin 0
+	padding 0
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+
+a
+	text-decoration: none;
+
+// Defines margings and style for commun elements
+
+.title
+	font-size: textTitle - 15px;
+	margin: 0 0 textMargin 0;
+	line-height: textTitle;
+	@media all and (min-width: tabletWidth)
+		font-size: textTitle - 10px;
+	@media all and (min-width: desktopWidth)
+		font-size: textTitle;
+
+.subtitle
+	font-size: textSubtitle;
+	margin: 0 0 textMargin 0;
+	line-height: textSubtitle;
+
+.paragraph
+	font-size: textParagraph - 2px;
+	@media all and (min-width: tabletWidth)
+		font-size: textParagraph - 2px;
+	@media all and (min-width: desktopWidth)
+		font-size: textParagraph;
+
+// Basic components
+
+// Importing menu
+@import 'menu.styl'
+
+.container
+	width: 100%;
+	display: inline-block;
+	padding: 3em 0;
+
+	&-int
+		margin: 0 1.5em;
+		position: relative;
+		@media screen and (min-width: tabletWidth)
+			width: tabletWidth - 50px; 
+			margin: 0 auto;
+		@media screen and (min-width: desktopWidth)
+			width: desktopWidth - 50px;
+			margin: 0 auto;
+
+.bigHeader
+	height: 150px;
+	background-color: #dce3e8;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-image: url(../images/jorge_ferreiro_small.jpg);
+	background-size: auto;
+	background-size: cover; 
+	margin-top:75px;
+
+	.container-int {
+		height: 130px;
+	}
+	@media all and (min-width: tabletWidth)
+		height: 260px;
+		background-image: url(../images/jorge_ferreiro_medium.jpg);
+		background-position:70% 50%;
+		.container-int {
+			height: 240px; 
+			padding: 0; 
+		}
+	@media all and (min-width: desktopWidth)
+		height: 280px;
+		// background-image: url(../images/jorge_ferreiro_large.jpg);
+		background-size: auto;
+
+	// Big header logo
+	&-logo
+		width: 200px; 
+		display: inline-block;  
+		left: 0; 
+		position: absolute;
+		bottom: 0;
+		&-image 
+			height: 50px;
+			display: block;
+			background: rgba(255, 255, 255, 0.5);
+			background:url(../images/logo.png);
+			background-size:100% auto;
+			background-repeat:no-repeat;
+			background-position:50% 50%;
+			margin-top: 1em;
+		&-text
+			// This is only for SEO
+			display: none;
+		&-subtext
+			font-size: 1em;
+			line-height: 1em;
+
+.header
+	width: 100%;
+	height: 75px;
+	background: rgba(15, 22, 63, 0.9);
+	background: rgba(0, 0, 0, 0.7);
+	background: rgba(255, 255, 255, 0.8);
+	margin-top: 0;
+	z-index: 10;
+	position: fixed;
+	&-int
+		margin: 0 1.5em;
+		position: relative;
+		@media screen and (min-width: tabletWidth)
+			width: tabletWidth - 50px; 
+			margin: 0 auto;
+		@media screen and (min-width: desktopWidth)
+			width: desktopWidth - 50px;
+			margin: 0 auto;
+	&-fixed
+		background: rgba(255, 255, 255, 0.9);
+		position: fixed;
+		top: 0;
+		margin-top: 0;
+	// Header logo
+	&-logo
+		max-width: 200px; 
+		margin-top: 10px;
+		display: inline-block;
+	&-menu
+		height: 50px;
+		display: inline-block;
+		vertical-align: top;
+		float: right;
+		position: absolute;
+		top: 0;
+		right: 0;
+		&-separator {
+			width: 1px;
+			height: 100%;
+			display: inline-block;
+			background: blue;
+			vertical-align: top;
+		}
+		.header-menu-language {
+			margin-left: 0.5em; 
+		}
+		li
+			display: inline-block;
+			position: relative;
+			height: 100%;
+			margin-left: 1em;
+			vertical-align: top;
+			a 
+				height: 100%;
+				display: block;
+				position: relative;
+
+				p
+					margin: 0;
+					padding: 0;
+					position: relative;
+					line-height: 1.3em;
+					top: 50%;
+					-webkit-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					transform: translateY(-50%);
+ 
+					img
+						width:20px;
+						display: none;
+  		
+
+ 
