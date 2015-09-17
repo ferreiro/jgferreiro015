@@ -123,12 +123,12 @@ block content
 				h1 Tu por aquí, que bieeeen!
 				p Vale, te cuento. Puedes o elegir una fecha que te venga bien para hablar por skype o, si estás en madrid / planeas venir, elegir la opción de tomar algo. 
 
-				form(action='/mail', name='contactus', method='post', novalidate)
+				form(action='/mail', name='contactus', method='post', novalidate).contactForm
 					fieldset.contact-form-field
 						p.contact-form-field-text Nombre <span>* (obligatorio, al menos 2 caracteres)</span>
 						.contact-form-field-element
 							//- keepInputValue class will keep the input value via javascript
-							input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required).contact-form-field-element-input.contact-form-field-element-name
+							input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required).contact-form-name
 					
 					fieldset.contact-form-field
 						p.contact-form-field-text Email <span>* (obligatorio)</span>
