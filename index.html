@@ -9,61 +9,20 @@
 	<meta name="author" content="Jorge Ferreiro">
 
 	<link href='https://fonts.googleapis.com/css?family=Lora|Lato|Martel|Kadwa' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="assets/css/styles.css?v=1.0">
 
 	<!-- Update website after each changes on css - Only
 	for developing stage. Don't upload on deployment -->
-	<script type="text/javascript" src="assets/js/cssrefresh.js"></script> 
-
+ 
 </head>
 
 <body>
 
-	<!-- Menu -->
 
-	<div class="menuTop">
-		<div class="menuTop-int">
 
-			<!-- Hidden until header dissapeared -->
-			<div class="menuTop-logo">
-				<a href="index.html">
-					<span class="bigHeader-logo-image" title="Jorge Ferreiro"></span>
-				</a>
-			</div>
 
-			<!-- Languages -->
-			<div class="menuTop-box">
-				<ul class="menuTop-languages">
-					<li><a href="#">English</a></li>
- 				</ul>
-			</div>
-
-			<!-- Languages -->
-			<div class="menuTop-box">
-				<a href="" class="menuTop-contact">
-					<p>Contacta</p>
-				</a>
-			</div>
-
-			<!-- Mobile button -->
-			<div class="menuTop-button" id="mobile-nav"></div>
-
-			<ul class="languages">
-				<li class="header-menu-language">
-					<a href="/en" title="English">
-						<p>EN</p>
-					</a>
-				</li>
-				<li class="header-menu-language">
-					<a href="/en" title="English">
-						<p>ES</p>
-					</a>		
-				</li> 
-			</ul>
-		</div>
-	</div>
-	 
 	<nav class="menu">
 	  <ul class="menuList">
 
@@ -85,18 +44,60 @@
 
 	    <!-- Quien soy -->
 	    <li>
-		    <a href="#">
+		    <a href="https://twitter.com/jgferreiro" target="_blank">
 		    	<span></span>
 		    	<p>Twitter @jgferreiro</p>
 		    </a>
 	    </li>
- 
-	    <li id="openContact"><a href="#contact"><p>Contacta</p></a></li> 
+
+	    <li class="openContact"><a href="#contact"><p>Contacta</p></a></li> 
 	  </ul>
 	</nav> 
 
 	<div class="mobile-wrapper"><!-- Fin mobile wrapper -->
 
+		<!-- Menu -->
+		<div class="menuTop">
+			<div class="menuTop-int">
+
+				<!-- Hidden until header dissapeared -->
+				<div class="menuTop-logo">
+					<a href="index.html">
+						<span class="menuTop-logo-image" title="Jorge Ferreiro"></span>
+					</a>
+				</div>
+
+				<!-- Languages -->
+				<div class="menuTop-box">
+					<ul class="menuTop-languages">
+						<li><a href="#">Speak english?</a></li>
+	 				</ul>
+				</div>
+
+				<!-- Languages -->
+				<div class="menuTop-box" style="display:none;">
+					<a href="#" class="openContact menuTop-contact">
+						<p>Contacta</p>
+					</a>
+				</div>
+
+				<!-- Mobile button -->
+				<div class="menuTop-button" id="mobile-nav"></div>
+
+				<ul class="languages">
+					<li class="header-menu-language">
+						<a href="/en" title="English">
+							<p>EN</p>
+						</a>
+					</li>
+					<li class="header-menu-language">
+						<a href="/en" title="English">
+							<p>ES</p>
+						</a>		
+					</li> 
+				</ul>
+			</div>
+		</div>
 
 		<!--
 			A container is the basic structure of the webpage.
@@ -111,84 +112,148 @@
 					<a href="index.html" title="Full stack Developer">
 						<span class="bigHeader-logo-image" title="Jorge Ferreiro"></span>
 						<h1 class="bigHeader-logo-text">Jorge Ferreiro</h1><!-- SEO / Hide -->
-						<h2 class="bigHeader-logo-subtext">Full stack programmer</h2>	
+						<h2 class="bigHeader-logo-subtext">Programador web full stack</h2>	
 					</a>
 				</div>
 			<!-- Finish container content -->
 			</div>
 		</section>
 
-		<section class="container">
+		<section class="container" id="content">
 			<div class="container-int">
 			<!-- Placed the content -->
 
 				<div class="content-bio">
-					<h4 class="title">¡Bievenido! Soy Jorge Ferreiro</h4>
-					<h3 class="subtitle">
 
-					</h3>
+				<h3 class="subtitle">
+					¿Yo quien soy?
+				</h3>
+
 					<p class="paragraph">
-						Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+						¡Hola! Soy Jorge, <b>programador</b> web <a href="">full-stack</a> y <b>estudiante</b> de Ingeniería Informática. Con el término full-stack, me refiero a que desarrollo tanto la parte visual de una web (front-end) como todo lo que hay por detras (base de datos, gestión de peticiones...), lo que se conoce como backend, vaya.
 					</p>
 					<p class="paragraph">
-						No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. 
+						Me encanta trabajar como programador freelance en proyectos interesantes y desafiantes. Compagino mi trabajo con los estudios. Te diré, que en mis ratos libres tomo fotografías y produzco música (¿te he dicho que me encanta la electronica?)
 					</p>
 					<p class="paragraph">
-						Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+						Una de las cosas que me parece fascinante, es  aprender de forma dirigida. Vamos, que  siempre me he buscado la vida para aprender una nueva tecnología o lenguaje de programación. Considero que la capacidad para aprender y el trabajo duro, son dos de mis mayores virtudes. ¡Ah, se me olvidaba! Me encantan los retos.
 					</p>
 				</div><!-- Fin content bio -->
 
-				<div class="content-skills">
-					<ul class="content-skills-list">
-						<li class="content-skills-list-entry">
-							<span class="content-skills-list-logo"><img src="assets/icons/html5.svg" title="HTML5" alt="HTML5" /></span>
-						</li>
-						<li class="content-skills-list-entry">
-							<span class="content-skills-list-logo"><img src="assets/icons/css3.svg" title="CSS3" alt="CSS3" /></span>
-						</li>
-					</ul>
-				</div><!-- Fin content skills -->
+				<h3 class="subtitle">
+					Skills y conocimientos
+				</h3>
+				
+				<ul class="skills">
+					<li class="skills-entry">
+						<span class="skills-entry-logo"><img src="assets/icons/javascript.svg" width="40px" title="Javascript" alt="JAVASCRIPT" /></span>
+						<p class="skills-entry-text">
+							Javascript
+						</p>
+					</li>
+					<li class="skills-entry">
+						<span class="skills-entry-logo"><img src="assets/icons/nodejs.png" title="HTML5" alt="HTML5" /></span>
+						<p class="skills-entry-text">
+							Node.js
+						</p>
+					</li>
+					<li class="skills-entry">
+						<span class="skills-entry-logo"><img src="assets/icons/stylus.png" title="HTML5" alt="HTML5" /></span>
+						<p class="skills-entry-text">
+							Less.js / stylus
+						</p>
+					</li> 
+					<li class="skills-entry">
+						<span class="skills-entry-logo"><img src="assets/icons/html5.svg" title="HTML5" alt="HTML5" /></span>
+						<p class="skills-entry-text">
+							HTML5
+						</p>
+					</li>
+					<li class="skills-entry">
+						<span class="skills-entry-logo"><img src="assets/icons/css3.svg" title="HTML5" alt="HTML5" /></span>
+						<p class="skills-entry-text">
+							CSS3
+						</p>
+					</li>
+					<li class="skills-entry">
+						<span class="skills-entry-logo"><img src="assets/icons/github.svg" title="GIT" alt="GIT" /></span>
+						<p class="skills-entry-text">
+							Git
+						</p>
+					</li>  
+				</ul><!-- Fin content skills -->
 
-				<div class="content-projects">
-					<ul class="content-projects-list">
-						<li class="content-projects-list-entry">
-							<div class="content-projects-list-image">
-								<a href="#" target="_blank">
+				<p class="paragraph">
+					Si eres <a href="https://es.wikipedia.org/wiki/Geek" target="_blank">geek</a>, lo más probable es que conozcas las tecnologías de arriba, pero si eres como el resto de los mortales (:P), déjame contarte qué conocimientos tengo y en qué soy bueno.
+				</p>
+
+				<div id="selectOptionBox">
+					<div class="button">
+						<a href="#" id="goToExplanation">
+							¡Sí, quiero que me lo cuentes!
+						</a>
+					</div>
+					<div class="button-lightGrey">
+						<a href="#" id="goToGeek">
+							¡No, soy geek! :)
+						</a>
+					</div>
+				</div><!-- Fin box -->
+
+				<div id="skillsExplanation" style="display:none; position:relative;">
+					<p class="paragraph">
+						Para el front-end trabajo con HTML5, javascript (la mayoría de veces con JQuery) y CSS3. Suelo utilizar preprocesadores para estilos (less.js, stylus y saas).
+					</p>
+					<p class="paragraph">
+						Para el backend, programo javascript del lado del servidor (aka. NODE.JS). Como apunte, te diré que he programado tanto en c++ y java, pero no son lenguajes que a día de hoy trabaje.
+					</p>
+					<p>
+						<b>Aprendiendo:</b>
+						Angular.js
+					</p>
+					<a href="#projects" class="close" id="goProjects">OK! Sigamos</a>
+
+				</div><!-- End HIDDEN CONTENT -->
+
+				<h3 class="subtitle">
+					Proyectos personales
+				</h3>
+
+				<ul class="projects" id="projects"> 
+					<li class="projects-entry">
+						<div class="projects-entry-int">
+							<div class="projects-entry-logo">
+								<a href="http://www.music4deejays.com" target="_blank">
 									<img src="assets/img/music4deejays.jpg" />
 								</a>
 							</div>
-							<h3 class="content-projects-list-title">Music4deejays</h3>
-							<h4 class="content-projects-list-subtitle">CTO/Founder</h4>
-							<p class="content-projects-list-info">Plataforma de promoción musical</p>
-							<a href="#" target="_blank" class="content-projects-list-link">Ver proyecto</p>
-						</li>
-					</ul>
-				</div><!-- Fin content skills -->
+							<h3 class="projects-entry-title">
+								<a href="http://www.music4deejays.com" target="_blank">Music4deejays</a>
+							</h3>
+							<h4 class="projects-entry-subtitle">CTO/Founder</h4>
+							<p class="projects-entry-info">Promocionamos a músicos y artistas con  talento que están esperando su oportunidad para brillar.</p>
+							<a href="#" target="_blank" class="projects-entry-link">Ver proyecto</a>
+						</div>
+					</li>
 
-				<div class="content-education">
-					<ul class="content-education-list">
-						<li class="content-education-list-entry">
-							<div class="content-education-list-image">
-								<a href="#" target="_blank">
-									<img src="assets/img/.jpg" />
-								</a>
-							</div>
-							<h3 class="content-education-list-title">Computer engineering</h3>
-							<h4 class="content-education-list-subtitle">2014-2016 (expected)</h4>
-							<p class="content-education-list-info">Descripción</p>
-	 					</li>
-					</ul>
-				</div><!-- Fin content skills -->
-				
+				</ul><!-- Fin content skills -->
+
 			<!-- Finish container content -->
 			</div>
 		</section>
 
-		<section class="container" id="contact">
+		<section class="container contact" id="contact">
 			<div class="container-int">
 			<!-- Placed the content -->
 
-				<div class="contact">
+				<div class="contactBox">
+					<div class="contactBox-rounds">
+						<div class="contactBox-rounds-box">
+							
+						</div>
+					</div>
+
+
 					<div class="contact-mail">
 						<img src="assets/icons/email.svg">
 					</div>
@@ -232,8 +297,8 @@
 	</div><!-- Fin mobile wrapper -->
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="assets/js/scripts.js"></script>
 	<script src="assets/js/menu.js"></script>
+	<script src="assets/js/scripts.js"></script>
 
 </body>
 </html>

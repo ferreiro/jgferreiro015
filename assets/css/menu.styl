@@ -1,5 +1,6 @@
 .menuTop
    width: 100%;
+   padding:0;
    background: rgba(255,255,255,0.9);
    height: 75px; 
    position: fixed;
@@ -8,8 +9,8 @@
    top:0;
 
    &-int
-      margin:0;
-      margin-right: 2em; 
+      margin:0; 
+      position:relative;
       height:100%; 
       text-align: right; 
 
@@ -24,10 +25,41 @@
       height:75px;
       margin:0 auto;
       position:absolute;
-      left:50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+      display:none;
+      left:0;
+      // left:50%;
+      // -webkit-transform: translateX(-50%);
+      // -ms-transform: translateX(-50%);
+      // transform: translateX(-50%);
+
+      &-image 
+        height: 50px;
+        margin-top:0.7em;
+
+        @media all and (min-width: tabletWidth)
+          height: 48px; 
+          margin-top:0.8em;
+        @media all and (min-width: desktopWidth)
+          height: 60px;
+          margin-top:0.5em;
+
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+        background:url(../images/logo.png);
+        background-size:100% auto;
+        background-repeat:no-repeat;
+        background-position:50% 50%;
+      &-text
+        // This is only for SEO
+        display: none;
+      &-subtext
+        font-size: 1em;
+        line-height: 1em;
+
+
+      &-shown
+        background:red;
+        display:block !important; 
 
    // contact button
    &-contact
@@ -41,6 +73,8 @@
       -webkit-border-radius: 60px;
       -moz-border-radius: 60px;
       border-radius: 60px;
+      @media all and (max-width:tabletWidth)
+        display:none;
       p
          line-height:0;
          margin:0;
@@ -51,6 +85,8 @@
       margin:0;
       padding:0;
       display:block;
+      @media all and (max-width:tabletWidth)
+        display:none;
       li
          float:left;
          margin-left:0.5em;
@@ -70,6 +106,8 @@
       background-position:100% 50%;
       background-repeat:no-repeat;
       background-image: url(../icons/menu.svg);
+      z-index:1000;
+      position:relative;
 
 
 
@@ -176,11 +214,13 @@
 **/
 
 .mobile-wrapper {
+  margin-left:0;
+}
+
+.mobile-wrapper-active {  
+  margin-left:-150px;
+
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
-}
-
-.mobile-wrapper-active { 
-   margin-right:240px;
 }
