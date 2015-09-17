@@ -1,3 +1,9 @@
+// Layer that wraps the skills inner content
+.skills-block
+	background:#f4f4f4;
+	border-top:1px solid #E6EAEC;
+	
+// Content for the skills: list of 3 colums
 .skills
 	width:100%; 
 	margin-bottom:2em;
@@ -9,6 +15,10 @@
 		vertical-align:top;
 		margin:0.3em 0;
 		margin-right:-4px; 
+		@media all and (max-width: mobileWidth)
+			width:50%;
+		@media all and (max-width: tabletWidth)
+			width:50%;
 
 		&-logo
 			display:inline-block;
@@ -23,6 +33,5 @@
 			padding:0;
 			display:inline-block;
 			vertical-align:top;
-			margin-top:10px;
-			font-weight: 700;
+			margin-top:10px; 
 

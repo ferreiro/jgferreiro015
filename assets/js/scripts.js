@@ -8,7 +8,7 @@ var goToProjects = $('#goProjects');
 goToProjects.click(function() {
 	// scrollToProjects
 	$('html, body').animate({ 
-		scrollTop: $('#projects').offset().top - 150
+		scrollTop: $('#projects').offset().top - 40
 	}, 'slow');
 	return false;
 })
@@ -28,6 +28,7 @@ closeExplanation.click(function(e) {
 });
 
 openGeekMessage1.click(function() {
+	$('#skillsChecker').fadeIn(0);
 	alert("Tioooo, eres super geek ehh");
 	return false;
 });

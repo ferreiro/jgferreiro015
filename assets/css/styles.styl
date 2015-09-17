@@ -8,6 +8,7 @@ textTitle = 36px;
 textSubtitle = 24px;
 textParagraph = 18px;
 textMargin = 20px;
+redMagenta = #B33538;
 
 // Mixins
  
@@ -28,7 +29,11 @@ h1, h2, h3, h4, a, li, ul, a
 	-webkit-margin-after: 0;
 
 a
-	text-decoration: none;
+	text-decoration: underline;
+	color:#222;
+	&:hover
+		background:#f4f4f4;
+
 
 // Close
 .close   
@@ -49,11 +54,13 @@ a
 		font-size:14px;
 		padding:0.4em .7em;
 		color:#C39D9E;
+		color: rgba(179, 53, 56, 0.80);
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px;
 		border:1px dashed #D2B4B5;
 		display:block;
+		text-decoration:none;
 
 .button-lightGrey
 	@extend .button
@@ -80,7 +87,7 @@ a
 	font-size: textSubtitle;
 	margin: 0 0 textMargin 0;
 	line-height: textSubtitle;
-	color:#B33538;
+	color:redMagenta;
 	margin-top:1.5em;
 	margin-bottom:1em;
 
