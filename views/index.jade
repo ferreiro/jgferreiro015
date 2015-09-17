@@ -14,6 +14,7 @@ block content
 					li
 						a(href="#", onclick="alert('Hi! Sorry, but the webpage is not avaliable yet in english. However, we recommend you to use the google translator. Sorry for the inconvenience :(');") English?
 
+
 	// A container is the basic structure of the webpage.
 	// Dicides the content in different blocks. Each container has a inner div, which allows you to place content respecting the webpage width Eg: 1000px
 
@@ -37,7 +38,12 @@ block content
 					p.paragraph Me gusta trabajar en proyectos interesantes como programador freelance o a tiempo parcial. Compagino estos trabajos con mis estudios. En mi tiempo libre (no mucho la verdad) produzco música y tomo fotografías (¿te he dicho que me encanta la música electronica? Aunque mis gustos musicales son muy variados).
 					p.paragraph Una de las cosas más importantes para mi, es gestionar mi apredizaje. Desde pequeño soy bastante autodidacta. Vamos, que siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Si tuviera que elegir tres virtudes serían: capacidad para aprender, trabajo incesante y pasión por lo que hago. Sí, me gustan los retos y mantenerme despierto.
 
-		
+	if(special)
+		div(style="width:300px; height:150px; position:fixed; right:0; bottom:0; z-index:100;")
+			script(type="text/javascript").
+				alert("Hola! Esta es una versión especial de la web. No tendrás que LEER NADA, varios audio grabados con loquendo te narrarán todo mi contenido.")
+
+			<iframe width="100%" height="150px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/ferreirostartups/sets/gu-a-auditiva&amp;auto_play=true&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
 	section.container.skills-block
 		.container-int
@@ -210,7 +216,7 @@ block content
 						input(type="submit", value="¡Mandarlo!").button(style="padding:0.5em 1em;")
 
 			div#initialContactLayer
-				p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que no, siempre nos quedará twitter ;). Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para conocernos. Te cuento más cuando mandes el formulario ;). Saludos!
+				p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que no, siempre nos quedará twitter ;). Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para contactarnos.
 
 				.contactBox-coffeSkype
 					a(href="#", class="contactBox-coffeSkype-coffee")

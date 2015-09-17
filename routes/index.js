@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 	});
 });
 
-router.get('/?special=true', function(req, res, next) {
+router.get('/adaptada', function(req, res, next) {
 	res.render('index', {
 		title: 'Jorge Ferreiro - Programador full stack - node, javascript, less.js, jade y más. Backend y frontend.',
 		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery',
