@@ -5,6 +5,13 @@ var openGeekMessage1 = $('#goToGeek');
 var selectOptionBox = $('#selectOptionBox');
 var goToProjects = $('#goProjects');
 
+openExplanation.click(function() {
+	$('#introMessageSkills').fadeOut(300);
+	selectOptionBox.fadeOut(300);
+	boxExplanation.delay(500).fadeIn(300);
+	return false; // Prevent default
+});
+
 goToProjects.click(function() {
 	// scrollToProjects
 	$('html, body').animate({ 
@@ -12,20 +19,6 @@ goToProjects.click(function() {
 	}, 'slow');
 	return false;
 })
-
-openExplanation.click(function() {
-	selectOptionBox.hide('500');
-	boxExplanation.delay('100').fadeIn('medium');
-	return false; // Prevent default
-});
-
-closeExplanation.click(function(e) {
-	var e = $(this);
-	console.log(e)
-	boxExplanation.hide(0);
-
-	return false; // Prevent default
-});
 
 openGeekMessage1.click(function() {
 	$('#skillsChecker').fadeIn(0);

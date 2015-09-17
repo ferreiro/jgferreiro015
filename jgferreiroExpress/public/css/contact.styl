@@ -1,0 +1,397 @@
+// Contact
+.contact
+	background:#fff;
+	background:#E6EAEC;
+	background:rgba(244, 141, 101, 0.65);	
+	border-top:1px solid #E6EAEC;
+	background transparent
+	background:#f4f4f4;
+	padding 3em 0
+	&Box
+		&-rounds
+			width:100%;
+			display:inline-block;
+			text-align:center;
+			margin-bottom:1em;
+			&-box
+				width:100px;
+				height:100px;
+				background:rgba(0,65,126,0.5);
+				background:rgba(179, 53, 53, 0.8);
+				display:inline-block;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				border-radius: 100%;
+				text-align:center;
+				margin:0 -0.6em;
+				img
+					width:50%;
+					margin-top:1.4em;
+					color:#fff;
+
+		&-coffeSkype
+			width:100%;
+			height:80px;
+			margin-top:2em;
+			vertical-align:top;
+			
+			&-coffee
+				background-color:rgba(179, 130, 76, 0.8);
+				p:before
+					content:'¿Eres más de tomar algo...?';
+				&:hover 
+					background-color:rgba(179, 130, 76, 0.8);
+					p:before
+						content:'Soy más de tomar algo...';
+
+			&-skype
+				background:rgba(179, 53, 53, 0.8);
+				p:before
+					content:'¿...O te va más el rollo skype?';
+				&:hover 
+					background:rgba(179, 53, 53, 0.8);
+					p:before
+						content:'...me va más el rollo skype';
+
+			a 
+				width:47%; 
+				height:100%;
+				display:inline-block;
+				vertical-align:top;
+				text-align:center;
+				
+				text-decoration:none;
+				
+				color:#fff;
+				
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px; 
+				
+				-ms-transform: scale(1,1); /* IE 9 */
+				-webkit-transform: scale(1,1); /* Safari */
+				transform: scale(1,1); 
+				
+				-webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+				transition: all 0.3s;
+				
+				&:hover
+					-ms-transform: scale(1.2,1.2); /* IE 9 */
+					-webkit-transform: scale(1.2,1.2); /* Safari */
+					transform: scale(1.2,1.2);
+				p
+					margin-top:1.6em;
+					color:#fff;
+					
+			span
+				width:4.5%;
+				display:inline-block;
+				vertical-align:top;
+				font-family:arial;
+				margin-top:1.6em;
+				text-align:center;
+				color:rgba(0,0,0,.3);
+				
+
+ 
+.contact-form { 
+
+	padding: 1em;
+	display: block;	
+	margin-bottom: 2em !important;
+  
+	@media all and (max-width:tabletWidth) {
+		padding: 2em 1em;
+	}
+	@media all and (min-width:670px) {
+		width: 560px;  
+		margin: 0 auto; 
+		margin-top: 2em;
+		padding: 3em 0;
+		display: block;
+	} 
+	@media all and (min-width:desktopWidth) {
+		width: auto;  
+		margin: 0 auto; 
+		margin: 0 2.5em;  
+		padding: 2em 0;
+    	display: block;
+	} 
+
+	&-subtitle {
+		font-size: 1.2em;
+		margin-bottom: 1em;
+		opacity: .6;
+		text-align: center;
+    	// padding: 0 5%; 
+    	@media all and (min-width:600px) {
+    		margin-bottom: 1.5em;
+    	} 
+	} 
+	&-separator {
+		width: 100%;
+		display: block;
+	}
+	&-roundresponse {
+		/*
+		width: 50px;
+		height: 50px;
+		width: 70px;
+		height: 70px;
+		*/
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 2em; 
+		text-align: center;
+
+    	@media all and (max-width:tabletWidth) {
+			margin-top: 1.2em; 
+    	} 
+		span {
+			.border-radius(100%);
+			background: #f4f4f4;
+			font-size: 2.1em; 
+			display: inline-block; 
+			color: #ffffff;
+			padding: .8em; 
+		}
+
+		&-green span {
+			background: #61ed36;
+		}
+		&-red span {
+			background: #ed3636;
+		}
+	}
+	
+	// Sent message
+	&-loading {
+		width: 40px;
+		height: 40px;
+		margin: 5em auto;
+		background: url(../images/loading.gif) 50% 50%;
+		background-size: 100%; 
+		display: none; 
+	    .transition(3px); 
+	}
+	&-loading-appear { 
+		-ms-transform: scale(1); /* IE 9 */
+	    -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+	    transform: scale(1);
+	    opacity: 1;  
+	}
+	// Sent message
+	&-sent {
+		display: none; 
+		@media all and (min-width:600px) {
+			width: 560px;  
+			margin: 0 auto; 
+			margin-top: 0;
+			padding: 1em 0; 
+			padding-bottom: 0;
+		} 
+	}
+	// This is used when the contact form diasspear.
+	&-content-disappear {
+		-ms-transform: scale(0); /* IE 9 */
+	    -webkit-transform: scale(0); /* Chrome, Safari, Opera */
+	    transform: scale(0);
+	    opacity: 0; 
+	}
+
+	// Message when the form is sent
+
+	&-messagetitle {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+		text-align: center; 
+	}
+	&-message {
+		font-size: 1.2em;
+		margin-bottom: 1.5em;
+		text-align: center; 
+		 
+		i {
+			margin-top: 0.5em;
+			font-size: .8em;
+			line-height: .8em;
+		}
+	}
+	// Form fields 
+	&-field { 
+
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    margin-bottom: 1em;
+	    text-align: center;
+	    display: block;
+	    height: auto;
+
+    	@media all and (min-width:desktopWidth) {
+   			width: 32%;
+    		display: inline-block;
+    		margin-right: -4px;
+    		margin-left: 2%;
+    		vertical-align: middle;
+
+    		&:first-child {
+    			margin-left: 0;
+    		}
+
+    		&-subject,
+    		&-message,
+    		&-button {
+    			width: 100%;
+    			margin-left: 0;
+    		}
+
+    	} 
+
+	    &-text {
+	    	font-size: 1em;
+	    	margin-bottom: 0.5em;
+	    	text-align: left;
+	    	display: none;
+	    	span {
+	    		opacity: .5;
+	    		font-style: italic;
+	    	}
+	    }
+	    // Inside element we have inputs and textarea
+	    &-element {
+
+	    	width: 100%;
+	    	min-height: 50px;
+	    	position: relative;
+	    	display: block;
+	    	background: #ffffff;
+
+	    	&-input {
+	    		// The user introduced text will show on blue
+	    		color: #f0sdff; 
+	    	}
+
+	    	&-input,
+	    	&-textarea,
+	    	&-select {  
+	    		width: 90%;
+	    		min-width: 90%;
+	    		max-width: 90%;
+	    		height: 50px;
+	    		padding:0 5%;
+	    		margin: 0; 
+	    		border: 0;  
+	    		outline: 0;
+	    		// Text style
+	    		text-align: left;
+	    		letter-spacing: 1px;
+ 	    		background: transparent;
+ 	    		-webkit-appearance:none;
+
+ 	    		-webkit-box-shadow: inset 0 0 0 1px rgba(204, 204, 204, 1);
+ 	    		-moz-box-shadow:    inset 0 0 0 1px rgba(204, 204, 204, 1);
+ 	    		box-shadow:         inset 0 0 0 1px rgba(204, 204, 204, 1);	
+		   		&:active,
+		   		&:focus { 
+			    		background:#F9F9F9; 
+		   		}
+    		 	@media all and (min-width:desktopWidth) {
+    		 		width: 80%;
+    		 		min-width: 80%;
+    		 		max-width: 80%;
+    		 		padding:0 10%;
+    		 	} 
+
+	    	}
+	    	// Use for ajax validation
+	    	&-wrongfield {
+	    		-webkit-box-shadow: 0 0 6px 1px rgba(222, 92, 94, 0.7);
+	    		-moz-box-shadow:    0 0 6px 1px rgba(222, 92, 94, 0.7);
+	    		box-shadow:         0 0 6px 1px rgba(222, 92, 94, 0.7);
+	    	}
+	    	&-select {
+	    		width: 100% !important;
+	    		min-width: 100% !important;
+	    		max-width: 100% !important;
+	    		padding: 0; 
+	    		text-indent: 5%;
+	    		text-align: center !important;
+
+	    		@media all and (min-width:desktopWidth) {
+	    			text-indent: 3.3%;
+	    		} 
+
+	    		&-icon {
+	    			position: absolute;
+	    			top: 0.5em;
+	    			right: 1em;
+	    			font-size: 1.6em;
+	    			color: rgba(0, 0, 0, 0.5);
+	    			z-index: 2;
+	    		}
+	    	}  
+		    &-textarea { 
+		    	height: 90px;
+		    	min-height: 90px;
+		    	max-height: 90px;
+	    		padding: 1em 5%;
+
+	    		@media all and (min-width:desktopWidth) {
+	    			width: 100%;
+	    			min-width: 100%;
+	    			max-width: 100%;
+	    			padding:1.1em 0;
+	    			text-indent: 3.3%;
+	    		} 
+		    }
+	    	&-name {
+	    		text-transform: capitalize;
+	    	}
+	    	&-button {
+
+	    		text-align: center;
+	    		border: 0;
+
+	    		background-color: #f0sdff;
+	    		background-color: darken(#f0sdff, 10%);
+
+	    		border-radius: 3px;
+	    		padding: 18px 29px 18px;
+	    		font-size: 14px;
+	    		text-transform: uppercase;
+	    		letter-spacing: 3px;
+	    		font-weight: 400;
+	    		font-style: normal;
+	    		line-height: 1;
+	    		color: #ffffff;
+	    		text-decoration: none;
+	    		display: block;
+	    		margin: 0 auto;
+	    		text-align: center;
+	    		border-radius: 3px;
+	    		-webkit-box-shadow: inset 0 0 0 0 rgba(204, 204, 204, 1);
+	    		-moz-box-shadow:    inset 0 0 0 0 rgba(204, 204, 204, 1);
+	    		box-shadow:         inset 0 0 0 0 rgba(204, 204, 204, 1);
+	    		letter-spacing: 1.7px;
+
+	    		margin-top: .7em;
+
+    			@media all and (min-width:tabletWidth) and (max-width:desktopWidth) {  
+	    			margin-top: 1.5em;
+    			}
+    			@media all and (min-width:desktopWidth) {  
+	    			padding: 18px 20px;
+    		    	margin-top:1em; 
+    			} 
+
+	    		.transition(0.2s);
+
+	    		&:hover {
+	    			background-color: #f0sdff;
+	    		}
+
+	    	}
+	    }
+	}
+}

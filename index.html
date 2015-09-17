@@ -25,18 +25,10 @@
 
 	<nav class="menu">
 	  <ul class="menuList">
-
-	  	<!-- Portada -->
-	    <li>
-		    <a href="#">
-		    	<span></span>
-		    	<p>Portada</p>
-		    </a>
-	    </li>
-
+ 
 	    <!-- Quien soy -->
 	    <li>
-		    <a href="#">
+		    <a href="#about">
 		    	<span></span>
 		    	<p>Quien soy</p>
 		    </a>
@@ -82,7 +74,7 @@
 				</div>
 
 				<!-- Mobile button -->
-				<div class="menuTop-button" id="mobile-nav"></div>
+				<div class="menuTop-button" id="mobile-nav" style="display:none;"></div>
 
 				<ul class="languages">
 					<li class="header-menu-language">
@@ -119,7 +111,7 @@
 			</div>
 		</section>
 
-		<section class="container" id="content">
+		<section class="container" id="about">
 			<div class="container-int">
 			<!-- Placed the content -->
 
@@ -130,13 +122,13 @@
 				</h3>
 
 					<p class="paragraph">
-						¡Hola! Soy Jorge, <b>programador</b> web <a href="">full-stack</a> y <b>estudiante</b> de Ingeniería Informática. Con el término full-stack, me refiero a que desarrollo tanto la parte visual de una web (front-end) como todo lo que hay detras (base de datos, gestión de peticiones...), lo que se conoce como backend, vaya.
+						¡Hola! Soy Jorge, <b>programador</b> web <a href="">full-stack</a> y <b>estudiante</b> de Ingeniería Informática. Con el término full-stack, me refiero a que desarrollo tanto la parte visual de una web (front-end) como todo lo que hay detras (páginas, formularios, funcionalidades, bases de datos...), lo que se conoce como backend, vaya.
 					</p>
 					<p class="paragraph">
-						Me encanta trabajar en proyectos interesantes y desafiantes, como programador freelance o part time. Compagino mi trabajo con los estudios. Y en mis ratos libres tomo fotografías y produzco música (¿te he dicho que me encanta la electronica?)
+						Me gusta trabajar en proyectos interesantes como programador freelance o a tiempo parcial. Compagino estos trabajos con mis estudios. En mi tiempo libre (no mucho la verdad) lo dedico a producir música y a tomar fotografías (¿te he dicho que me encanta la música electronica? Aunque mis gustos musicales son muy variados).
 					</p>
 					<p class="paragraph">
-						Una de las cosas que me parece fascinante, es  aprender de forma dirigida. Vamos, que  siempre me he buscado la vida para aprender una nueva tecnología o lenguaje de programación. Considero que la capacidad para aprender y el trabajo duro, son dos de mis mayores virtudes. ¡Ah, se me olvidaba! Me encantan los retos.
+					Una de las cosas que más importancia doy, es mi aprendizaje. Desde pequeño soy bastante autodidacta. Vamos, que siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Si tuviera que elegir tres virtudes serían: capacidad para aprender, trabajo incesante y pasión por lo que hago. Sí, me gustan los retos y disfruto del proceso hasta cumplirlos.
 					</p>
 				</div><!-- Fin content bio -->
 
@@ -190,22 +182,7 @@
 					</li>  
 				</ul><!-- Fin content skills -->
 
-				<p class="paragraph">
-					Si eres <a href="https://es.wikipedia.org/wiki/Geek" target="_blank">geek</a>, lo más probable es que conozcas las tecnologías de arriba, pero si eres como el resto de los mortales (:P), déjame contarte qué conocimientos tengo y en qué soy bueno.
-				</p>
 
-				<div id="selectOptionBox">
-					<div class="button">
-						<a href="#" id="goToExplanation">
-							¡Sí, quiero que me lo cuentes!
-						</a>
-					</div>
-					<div class="button-lightGrey">
-						<a href="#" id="goToGeek">
-							¡No, soy geek! :)
-						</a>
-					</div>
-				</div><!-- Fin box -->
 
 				<div id="skillsChecker" style="display:none; position:relative;">
 					<p class="paragraph">
@@ -215,20 +192,39 @@
 					<a href="">No Jorge, ¡has puesto los botones muy juntos y le he dado sin querer!</a><br />
 					<a href="">Sí sí, he pulsado el boton "No, soy geek" conscientemente...</a>
 				</div>
-				<div id="skillsExplanation" style="display:none; position:relative;">
+				<div id="skillsExplanation" style="display:; position:relative;">
 					<p class="paragraph">
-						Para el <u>frontend</u> trabajo con HTML5, javascript (la mayoría de veces con JQuery) y CSS3. Suelo utilizar preprocesadores para estilos (less.js, stylus y saas).
+						Para el <u>frontend</u> trabajo con HTML5, javascript y CSS3. Además, utilizo less.js, stylus o saas como pre-procesadores de estilos. Y jade.js como generador de vistas.
 					</p>
 					<p class="paragraph">
-						Para el <u>backend</u>, programo javascript del lado del servidor (aka. NODE.JS). Como apunte, te diré que he programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje o que estén en mi punto de mira.
+						Para el <u>backend</u>, programo en javascript del lado del servidor (aka. <a href="http://hipertextual.com/archivo/2014/04/nodejs-javascript-servidor/" target="_blank">NODE.JS</a>). Como apunte, te diré que he programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje o que estén en mi punto de mira.
 					</p>
 					<p>
 						<b>¿Qué estoy aprendiendo?</b>
-						Angular.js.
+						Angular.js y más sobre NoSQL db's.
 					</p> 
 					<a href="#projects" class="close" id="goProjects">OK! Sigamos</a>
 
 				</div><!-- End HIDDEN CONTENT -->
+
+
+
+				<p class="paragraph" id="introMessageSkills" style="display:none;">
+					Si eres <a href="https://es.wikipedia.org/wiki/Geek" target="_blank">geek</a>, lo más probable es que conozcas las tecnologías de arriba, pero si eres como el resto de los mortales (:P), déjame contarte qué conocimientos tengo y en qué soy bueno.
+				</p>
+
+				<div id="selectOptionBox" style="text-align:center; display:none;">
+					<div class="button">
+						<a href="#" id="goToExplanation">
+							¡Sí, quiero que me lo cuentes!
+						</a>
+					</div>
+					<div class="button-lightGrey" style="display:none;">
+						<a href="#" id="goToGeek">
+							¡No, soy geek! :)
+						</a>
+					</div>
+				</div><!-- Fin box -->
 
 			<!-- Finish container content -->
 			</div>
@@ -242,7 +238,7 @@
 				</h3>
 
 				<p>
-					Te voy a contar un secreto, a veces tengo ideas y me encanta hacerlas realidad. Aquí te iré poniendo nuevos proyectos que vaya sacando entre exámenes y trabajos freelance y también aquellos en los que colabore.
+					Te voy a contar un secreto, a veces tengo ideas y me encanta hacerlas realidad. Aquí te iré poniendo nuevos proyectos que vaya sacando o en los que esté involucrado con otros colegas (¡es genial unir recursos y montar cosas chulas!).
 				</p>
 				<ul class="projects"> 
 					<li class="projects-entry">
@@ -256,10 +252,11 @@
 								<a href="http://www.music4deejays.com" target="_blank">Music4deejays</a>
 							</h3>
 							<h4 class="projects-entry-subtitle">CTO/Founder</h4>
+							<p class="projects-entry-date">Oct 2014-actualidad</p>
 							<p class="projects-entry-info">Promocionamos a músicos y artistas con  talento que están esperando su oportunidad para brillar.</p>
 							<a href="#" target="_blank" class="projects-entry-link">Ver proyecto</a>
 						</div>
-					</li>
+					</li> 
 
 				</ul><!-- Fin content skills -->
 
@@ -283,7 +280,7 @@
 
 					<div>
 						<p>
-							Querido visitante, llegados a este punto, solo me queda decirte dos últimas cosas... La primera darte las gracias por visitar mi web. La segunda es plantearte una pregunta: ¿Te gustaría que hablasemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría charlar simplemente... Si tu respuesta es que no, entonces tienes pinta de que te va más lo virtual, así que ¡hablemos por twitter!. Si tu respuesta es que sí, te voy a facilitar dos formas para conocernos.
+							Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que no, siempre nos quedará twitter ;). Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para conocernos. 
 						</p>
 					</div>
 
@@ -308,7 +305,8 @@
 					<p class="footer-text">&copy; 2015 Jorge Ferreiro</p>
 				</div>
 				<div class="footer-right">
-					<p class="footer-link"><a href="">Newsletter</a></p>
+					<p class="footer-link"><a href="http://twitter.com/jgferreiro" target="_blank">@jgferreiro</a></p>
+					<p class="footer-link"><a href="#" onclick="alert('Puedes contactarme en esta dirección: me@jgferreiro.com ¡Nos vemos!'); return false;">Mostrar mail</a></p>
 				</div>
 				<div class="footer-middle">
 					<h5>Made by <u>Jorge Ferreiro</u></h5>
@@ -320,6 +318,7 @@
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="assets/js/menu.js"></script>
+	<script src="assets/js/fixedHeader.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
 </body>

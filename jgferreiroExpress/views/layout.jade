@@ -1,0 +1,35 @@
+doctype html
+html
+	head
+
+		meta(charset="utf-8")
+		title= title
+		meta(name="description", content="#{description}")
+		meta(name="author", content="Jorge Ferreiro")
+
+		link(href='https://fonts.googleapis.com/css?family=Lora|Lato|Martel|Kadwa', rel='stylesheet', type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic', rel='stylesheet', type='text/css')
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/styles.css?v=1.0")
+		
+	body
+		.mobile-wrapper
+			block content
+
+			footer.footer
+				.footer-int 
+					.footer-left 
+						p.footer-text &copy; 2015 Jorge Ferreiro
+					.footer-right
+						p.footer-link
+							a(href="http://twitter.com/jgferreiro", target="_blank") @jgferreiro
+						p.footer-link
+							a(href="#", onclick="alert('Puedes contactarme en esta dirección: me@jgferreiro.com ¡Tengo ganas de leer tu mail!'); return false;") Mostrar mail
+					.footer-middle
+						h5 Made by <u>Jorge Ferreiro</u>
+
+		script(src="http://code.jquery.com/jquery-1.11.3.min.js")
+		script(src="js/menu.js")
+		script(src="js/fixedHeader.js")
+		script(src="js/scripts.js")
+
