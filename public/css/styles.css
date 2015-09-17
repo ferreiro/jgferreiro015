@@ -160,6 +160,7 @@ a:hover {
 }
 .menuTop-logo-subtext {
   font-size: 1em;
+  font-size: 1.3em;
   line-height: 1em;
 }
 .menuTop-logo-shown {
@@ -586,7 +587,7 @@ a:hover {
 }
 .projects-entry-logo {
   width: 100%;
-  height: 140px;
+  height: 155px;
   background: #f3f3f3;
   display: inline-block;
   overflow: hidden;

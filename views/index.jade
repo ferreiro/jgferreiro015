@@ -33,9 +33,9 @@ block content
 				// Placed the content
 				.content-bio
 					h3.subtitle ¿Quién soy yo?
-					p.paragraph ¡Hola! Soy Jorge, <b>programador</b> full-stack y <b>estudiante</b> de Ingeniería Informática. Con el término full-stack, me refiero a que desarrollo tanto la parte visual de una web (front-end) como todo lo que hay detras (páginas, formularios, bases de datos...), lo que se conoce como backend, vaya.
-					p.paragraph Me gusta trabajar en proyectos interesantes como programador freelance o a tiempo parcial. Compagino estos trabajos con mis estudios. En mi tiempo libre (no mucho la verdad) lo dedico a producir música y a tomar fotografías (¿te he dicho que me encanta la música electronica? Aunque mis gustos musicales son muy variados).
-					p.paragraph Una de las cosas que más importantes doy, es mi aprendizaje. Desde pequeño soy bastante autodidacta. Vamos, que siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Si tuviera que elegir tres virtudes serían: capacidad para aprender, trabajo incesante y pasión por lo que hago. Sí, me gustan los retos y disfruto del proceso hasta cumplirlos.
+					p.paragraph ¡Hola! Soy Jorge, <b>programador</b> full-stack y <b>estudiante</b> de Ingeniería Informática. Ser programador full-stack quiere decir que puedo desarrollar tanto la parte visual de una web (front-end) como todo lo que hay detras (páginas, modelos, lógica, formularios, bases de datos...), lo que se conoce como backend, vaya.
+					p.paragraph Me gusta trabajar en proyectos interesantes como programador freelance o a tiempo parcial. Compagino estos trabajos con mis estudios. En mi tiempo libre (no mucho la verdad) produzco música y tomo fotografías (¿te he dicho que me encanta la música electronica? Aunque mis gustos musicales son muy variados).
+					p.paragraph Una de las cosas más importantes para mi, es gestionar mi apredizaje. Desde pequeño soy bastante autodidacta. Vamos, que siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Si tuviera que elegir tres virtudes serían: capacidad para aprender, trabajo incesante y pasión por lo que hago. Sí, me gustan los retos y mantenerme despierto.
 
 	section.container.skills-block
 		.container-int
@@ -91,29 +91,44 @@ block content
 						.projects-entry-int
 							.projects-entry-logo
 								a(href="http://www.music4deejays.com", target="_blank")
-									img(src="assets/img/music4deejays.jpg")
+									img(src="assets/images/m4d.jpg")
 							
 							h3.projects-entry-title
 								a(href="http://www.music4deejays.com", target="_blank") Music4deejays
 							h4.projects-entry-subtitle CTO/Founder 
 							p.projects-entry-date Oct 2014-actualidad</p>
-							p.projects-entry-info Promocionamos a músicos y artistas con  talento que están esperando su oportunidad para brillar.</p>
-							a.projects-entry-link(href="#", target="_blank") Ver proyecto
+							p.projects-entry-info Promocionamos a músicos y artistas con  talento para convertirles en números uno y darles su oportunidad.</p>
+							a.projects-entry-link(href="http://www.music4deejays.com", target="_blank") Ver proyecto
 
 
 	section#contact.container.contact
 		.container-int
 
-			.contact-form
+			.contactBox
+				.contactBox-rounds
+					.contactBox-rounds-box(style="background-color:rgba(179, 130, 76, 0.8);")
+						<img src="assets/icons/coffee.svg">
+					.contactBox-rounds-box
+						<img src="assets/icons/skype.svg">
+				
+			.contact-newForm(style="display:none;")
 				h1 Genial!
 				p Si vives en Madrid o tienes pensado venir, elige una fecha para tomarnos algo. De lo contrario, elige una fecha para hablar por skype
+				form(action='/mail', name='contactus', method='post', novalidate)
+					fieldset.contact-newForm-field
+						p
+						input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required)
+
+			.contact-form(style="display:none;")
+				h1 Tu por aquí, que bieeeen!
+				p Vale, te cuento. Puedes o elegir una fecha que te venga bien para hablar por skype o, si estás en madrid / planeas venir, elegir la opción de tomar algo. 
 
 				form(action='/mail', name='contactus', method='post', novalidate)
 					fieldset.contact-form-field
 						p.contact-form-field-text Nombre <span>* (obligatorio, al menos 2 caracteres)</span>
 						.contact-form-field-element
-						//- keepInputValue class will keep the input value via javascript
-						input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required).contact-form-field-element-input.contact-form-field-element-name
+							//- keepInputValue class will keep the input value via javascript
+							input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required).contact-form-field-element-input.contact-form-field-element-name
 					
 					fieldset.contact-form-field
 						p.contact-form-field-text Email <span>* (obligatorio)</span>
@@ -122,7 +137,7 @@ block content
 							input.keepInputValue(type='email', name='email', placeholder='¿A qué correo te puedo responder?' required).contact-form-field-element-input 
 					
 					fieldset.contact-form-field.contact-form-field-subject
-						p.contact-form-field-text ¿Qué día estás pensando? <span>(Ejemplo 16 de Abril)</span>
+						p.contact-form-field-text ¿Qué día te viene bien? <span>(Ejemplo 16 de Abril)</span>
 						.contact-form-field-element
 							select(name="day", required).contact-form-field-element-select
 								<option value='01'>01</option>
@@ -171,7 +186,7 @@ block content
 								<option value='10'>October</option>
 								<option value='11'>November</option>
 								<option value='12'>December</option>
- 
+			
 							select(name="year", required)
 								<option value='2015'>2015</option>
 								<option value='2016'>2016</option>
@@ -197,16 +212,11 @@ block content
 							<option value='Tomar algo'>Tomar algo</option>
 							<option value='Skype'>Skype/Hangouts</option> 
 
-					fieldset.contact-form-field.contact-form-field-button(style="margin-bottom:0;")
-						input(type="submit", value="¡Mandarlo!").contact-form-field-element-button
-			.contactBox
-				.contactBox-rounds
-					.contactBox-rounds-box(style="background-color:rgba(179, 130, 76, 0.8);")
-						<img src="assets/icons/coffee.svg">
-					.contactBox-rounds-box
-						<img src="assets/icons/skype.svg">
-				div
-					p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que no, siempre nos quedará twitter ;). Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para conocernos.
+					fieldset.contact-form-field.contact-form-field-button(style="padding:1.5em 0; text-align:center;")
+						input(type="submit", value="¡Mandarlo!").button(style="padding:0.5em 1em;")
+
+			div#initialContactLayer
+				p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que no, siempre nos quedará twitter ;). Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para conocernos. Te cuento más cuando mandes el formulario ;). Saludos!
 
 				.contactBox-coffeSkype
 					a(href="#", class="contactBox-coffeSkype-coffee")
@@ -214,5 +224,4 @@ block content
 					span o
 					a(href="#", class="contactBox-coffeSkype-skype")
 						p <!-- Texts are placed via :before on css -->
-
 
