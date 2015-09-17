@@ -582,6 +582,16 @@ a:hover {
   margin: 0.3em 0;
   margin-right: -4px;
 }
+@media all and (max-width:600px) {
+   .projects-entry  {
+    width:100%;
+  }
+} 
+@media all and (max-width:800px) {
+   .projects-entry  {
+    width:50%;
+  }
+}    
 .projects-entry-int {
   margin: 0 0.5em;
 }
