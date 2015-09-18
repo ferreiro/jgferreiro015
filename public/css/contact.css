@@ -32,7 +32,6 @@
 }
 .contactBox-coffeSkype {
   width: 100%;
-  height: 80px;
   margin-top: 2em;
   vertical-align: top;
 }
@@ -77,6 +76,15 @@
   -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
   transition: all 0.3s;
 }
+@media all and (max-width: desktopWidth) {
+  .contactBox-coffeSkype a {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  .contactBox-coffeSkype a:last-child {
+    margin-bottom: 0;
+  }
+}
 .contactBox-coffeSkype a:hover {
   -ms-transform: scale(1.2, 1.2); /* IE 9 */
   -webkit-transform: scale(1.2, 1.2); /* Safari */
@@ -94,4 +102,9 @@
   margin-top: 1.6em;
   text-align: center;
   color: rgba(0,0,0,0.3);
+}
+@media all and (max-width: desktopWidth -1px) {
+  .contactBox-coffeSkype span {
+    display: none;
+  }
 }

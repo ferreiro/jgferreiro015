@@ -94,11 +94,6 @@
   padding: 0;
   display: block;
 }
-@media all and (max-width: tabletWidth) {
-  .menuTop-languages {
-    display: none;
-  }
-}
 .menuTop-languages li {
   float: left;
   margin-left: 0.5em;
