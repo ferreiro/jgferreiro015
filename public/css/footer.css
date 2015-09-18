@@ -1,0 +1,16 @@
+.footer-left {
+  display: inline-block;
+}
+.footer-right {
+  float: right;
+}
+.footer-right p {
+  display: inline-block;
+  margin-left: 1em;
+}
+.footer-middle {
+  width: 100%;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  display: inline-block;
+}

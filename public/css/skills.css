@@ -1,0 +1,42 @@
+.skills-block {
+  background: #f4f4f4;
+  border-top: 1px solid #e6eaec;
+}
+.skills {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.skills-entry {
+  width: 33.333%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.3em 0;
+  margin-right: -4px;
+}
+@media all and (max-width: mobileWidth) {
+  .skills-entry {
+    width: 50%;
+  }
+}
+@media all and (max-width: tabletWidth) {
+  .skills-entry {
+    width: 50%;
+  }
+}
+.skills-entry-logo {
+  display: inline-block;
+  margin-right: 0.8em;
+  width: 40px;
+  height: 40px;
+}
+.skills-entry-logo img {
+  width: 40px;
+}
+.skills-entry-text {
+  margin: 0;
+  margin-right: 1em;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}

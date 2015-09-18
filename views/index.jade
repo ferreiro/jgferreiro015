@@ -2,6 +2,9 @@ extends layout
 
 block content
 
+
+	.loader
+
 	// Menu
 	.menuTop
 		.menuTop-int
@@ -34,9 +37,10 @@ block content
 				// Placed the content
 				.content-bio
 					h3.subtitle ¿Quién soy yo?
-					p.paragraph ¡Hola! Soy Jorge, <b>programador</b> full-stack y <b>estudiante</b> de Ingeniería Informática. Ser programador full-stack quiere decir que puedo desarrollar tanto la parte visual de una web (front-end) como todo lo que hay detras (páginas, modelos, lógica, formularios, bases de datos...), lo que se conoce como backend, vaya.
-					p.paragraph Me gusta trabajar en proyectos interesantes como programador freelance o a tiempo parcial. Compagino estos trabajos con mis estudios. En mi tiempo libre (no mucho la verdad) produzco música y tomo fotografías (¿te he dicho que me encanta la música electronica? Aunque mis gustos musicales son muy variados).
-					p.paragraph Una de las cosas más importantes para mi, es gestionar mi apredizaje. Desde pequeño soy bastante autodidacta. Vamos, que siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Si tuviera que elegir tres virtudes serían: capacidad para aprender, trabajo incesante y pasión por lo que hago. Sí, me gustan los retos y mantenerme despierto.
+					p.paragraph ¡Hola! Soy Jorge Ferreiro, <b>programador</b> full-stack y <b>estudiante</b> de Ingeniería Informática. Con el término Full-stack, me refiero a que puedo desarrollar tanto la parte visual de una web (frontend), como todo lo que hay detras: páginas, modelos, rutas, bases de datos... Lo que se conoce como backend, vaya.
+					p.paragraph Trabajo como programador freelance diseñando páginas web, APIs y aplicaciones web desde cero. También puedo involucrarme a tiempo parcial. En mi tiempo libre (no mucho la verdad) produzco música y tomo fotografías (¿te he dicho que me encanta la música electronica?).
+					p.paragraph Gestionar mi aprendizaje, es muy importante para mi. Soy autodidacta desde pequeño. Siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Si tengo que destacar 3 aptitudes serían: capacidad de aprender, constancia y pasión por lo que hago.
+					p.paragraph Sí, ¡me gustan los retos y cumplir objetivos!.
 
 	if(special)
 		div(style="width:300px; height:150px; position:fixed; right:0; bottom:0; z-index:100;")
@@ -82,9 +86,9 @@ block content
 			
 
 			div(style="position:relative;")#skillsExplanation
-				p.paragraph Para el <u>frontend</u> trabajo con HTML5, javascript y CSS3. Además, utilizo less.js, stylus o saas como pre-procesadores de estilos. Y jade.js como generador de vistas.
-				p.paragraph Para el <u>backend</u>, programo en javascript del lado del servidor (aka. <a href="http://hipertextual.com/archivo/2014/04/nodejs-javascript-servidor/" target="_blank">NODE.JS</a>). Como apunte, te diré que he programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje o que estén en mi punto de mira.
-				p.paragraph <b>¿Qué estoy aprendiendo?</b> Angular.js y más sobre NoSQL db's.
+				p.paragraph En el <u>frontend</u> utilizo HTML5, javascript y CSS3. También less.js, stylus o saas como pre-procesares de estilos y jade.js para generación de vistas.
+				p.paragraph Para el <u>backend</u>, programo en javascript del lado del servidor (aka. <a href="http://hipertextual.com/archivo/2014/04/nodejs-javascript-servidor/" target="_blank">NODE.JS</a>). He programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje.
+				p.paragraph <b>¿Qué estoy aprendiendo?</b> Angular.js y profundizando en NoSQL.
 				a(href="#projects").close#goProjects OK! Sigamos
 
 	section#projects.container
@@ -92,7 +96,7 @@ block content
 
 			.content-bio
 				h3.subtitle Proyectos personales
-				p.paragraph Te voy a contar un secreto, a veces tengo ideas y me encanta hacerlas realidad. Aquí te iré poniendo nuevos proyectos que vaya sacando o en los que esté involucrado con otros colegas (¡es genial unir recursos y montar cosas chulas!).
+				p.paragraph Cuando tengo ideas, me encanta hacerlas realidad. Aquí te iré poniendo nuevos proyectos que vaya sacando o en los que esté involucrado con otros colegas.
 
 				ul.projects
 					li.projects-entry
@@ -216,7 +220,7 @@ block content
 						input(type="submit", value="¡Mandarlo!").button(style="padding:0.5em 1em;")
 
 			div#initialContactLayer
-				p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que no, siempre nos quedará twitter ;). Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para contactarnos.
+				p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para contactarnos. Si tu respuesta es que no, siempre nos quedará <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
 
 				.contactBox-coffeSkype
 					a(href="#", class="contactBox-coffeSkype-coffee")

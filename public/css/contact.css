@@ -1,0 +1,97 @@
+.contact {
+  background: #fff;
+  background: #e6eaec;
+  background: rgba(244,141,101,0.65);
+  border-top: 1px solid #e6eaec;
+  background: transparent;
+  background: #f4f4f4;
+  padding: 3em 0;
+}
+.contactBox-rounds {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.contactBox-rounds-box {
+  width: 100px;
+  height: 100px;
+  background: rgba(0,65,126,0.5);
+  background: rgba(179,53,53,0.8);
+  display: inline-block;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 -0.6em;
+}
+.contactBox-rounds-box img {
+  width: 50%;
+  margin-top: 1.4em;
+  color: #fff;
+}
+.contactBox-coffeSkype {
+  width: 100%;
+  height: 80px;
+  margin-top: 2em;
+  vertical-align: top;
+}
+.contactBox-coffeSkype-coffee {
+  background-color: rgba(179,130,76,0.8);
+}
+.contactBox-coffeSkype-coffee p:before {
+  content: '¿Eres más de tomar algo...?';
+}
+.contactBox-coffeSkype-coffee:hover {
+  background-color: rgba(179,130,76,0.8);
+}
+.contactBox-coffeSkype-coffee:hover p:before {
+  content: 'Soy más de tomar algo...';
+}
+.contactBox-coffeSkype-skype {
+  background: rgba(179,53,53,0.8);
+}
+.contactBox-coffeSkype-skype p:before {
+  content: '¿...O te va más el rollo skype?';
+}
+.contactBox-coffeSkype-skype:hover {
+  background: rgba(179,53,53,0.8);
+}
+.contactBox-coffeSkype-skype:hover p:before {
+  content: '...me va más el rollo skype';
+}
+.contactBox-coffeSkype a {
+  width: 47%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -ms-transform: scale(1, 1); /* IE 9 */
+  -webkit-transform: scale(1, 1); /* Safari */
+  transform: scale(1, 1);
+  -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.3s;
+}
+.contactBox-coffeSkype a:hover {
+  -ms-transform: scale(1.2, 1.2); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2); /* Safari */
+  transform: scale(1.2, 1.2);
+}
+.contactBox-coffeSkype a p {
+  margin-top: 1.6em;
+  color: #fff;
+}
+.contactBox-coffeSkype span {
+  width: 4.5%;
+  display: inline-block;
+  vertical-align: top;
+  font-family: arial;
+  margin-top: 1.6em;
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}

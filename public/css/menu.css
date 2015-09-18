@@ -1,77 +1,233 @@
-.menu {
-  list-style: none;
-  line-height: 42px;
-  margin: auto;
-  /*outline: 1px solid red;*/
-  padding-left: 0;
-  width: 15em;
+.menuTop-navup {
+  top: -75px !important;
 }
-
-.menu a {
-  background: url(icons.png) no-repeat left top;
-  color: #ddd;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: block;
-  padding-left: 3em;
+.menuTop-down {
+  top: 0 !important;
+}
+.menuTop {
   width: 100%;
-}
-
-.menu a:hover {
-  margin-left: 1em;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-}
-
-.menu li {
-  box-shadow: 3px 0 rgba(52,152,219,.2) inset;
-  margin-bottom: 5px;
-  padding-left: .5em;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;/*outline: 1px solid green*/
-}
-
-.menu li:hover { box-shadow: 15em 0 rgba(52,152,219,.2)inset; }
-
-.menu li:nth-child(2) a { background-position: 0 -42px; }
-
-.menu li:nth-child(3) a { background-position: 0 -84px; }
-
-.menu li:nth-child(4) a { background-position: 0 -126px; }
-
-.menu li:nth-child(5) a { background-position: 0 -168px; }
-
-.menu li:last-child a { background-position: 0 -210px; }
-
-/*FIN MENU*/
-/*Posicion Responsive Menu*/
-
-nav {
-  background: rgba(41,128,185,1);
-  padding-right: .25em;
-  position: absolute;
-  left: -18em;
+  padding: 0;
+  background: rgba(255,255,255,0.9);
+  height: 75px;
+  position: fixed;
+  z-index: 100;
+  rigth: 0;
   top: 0;
-  padding-top: 5em;
+  transition: top 0.2s ease-in-out;
+}
+.menuTop-int {
+  margin: 0;
+  position: relative;
+  height: 100%;
+  text-align: right;
+}
+.menuTop-box {
+  display: inline-block;
+  height: 75px;
+}
+.menuTop-logo {
+  width: 200px;
+  height: 75px;
+  margin: 0 auto;
+  position: absolute;
+  display: none;
+  left: 0;
+}
+.menuTop-logo-image {
+  height: 50px;
+  margin-top: 0.7em;
+  display: block;
+  background: rgba(255,255,255,0.5);
+  background: url("../images/logo.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+@media all and (min-width: tabletWidth) {
+  .menuTop-logo-image {
+    height: 48px;
+    margin-top: 0.8em;
+  }
+}
+@media all and (min-width: desktopWidth) {
+  .menuTop-logo-image {
+    height: 60px;
+    margin-top: 0.5em;
+  }
+}
+.menuTop-logo-text {
+  display: none;
+}
+.menuTop-logo-subtext {
+  font-size: 1em;
+  line-height: 1em;
+}
+.menuTop-logo-shown {
+  background: #f00;
+  display: block !important;
+}
+.menuTop-contact {
+  float: left;
+  margin-left: 1em;
+  padding: 1.3em 1em;
+  margin-top: 0.65em;
+  -webkit-box-shadow: inset 0px 0px 0px 3px #dbdbdb;
+  -moz-box-shadow: inset 0px 0px 0px 3px #dbdbdb;
+  box-shadow: inset 0px 0px 0px 3px #dbdbdb;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+@media all and (max-width: tabletWidth) {
+  .menuTop-contact {
+    display: none;
+  }
+}
+.menuTop-contact p {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+.menuTop-languages {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+@media all and (max-width: tabletWidth) {
+  .menuTop-languages {
+    display: none;
+  }
+}
+.menuTop-languages li {
+  float: left;
+  margin-left: 0.5em;
+}
+.menuTop-languages li a {
+  padding: 1.4em 0;
+  display: block;
+}
+.menuTop-button {
+  width: 35px;
+  height: 75px;
+  z-index: 30;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 1em;
+  background-size: 40px auto;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../icons/menu.svg");
+  z-index: 1000;
+  position: relative;
+}
+.menu {
+  background: #2980b9;
+  background: #dce3e8;
+  position: fixed;
+  right: -18em;
+  top: 0;
+  padding-top: 75px;
   box-sizing: border-box;
   z-index: 20;
   height: 100%;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
-nav.active { left: 0; }
-
-#mobile-nav {
-  background: url(menu-icon.png);
+.menu.active {
+  right: 0;
+}
+.menu ul {
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: auto;
+/*outline: 1px solid red;*/
+  padding-left: 0;
+}
+.menu ul li {
+  margin: 0;
+  padding: 0;
+}
+.menu ul li {
+  box-shadow: 3px 0 rgba(52,152,219,0.2) inset;
+  margin-bottom: 5px;
+  padding-left: 0.5em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; /*outline: 1px solid green*/
+}
+.menu ul li a {
+  width: 100%;
+  background: url("menu.svg") no-repeat left top;
+  color: #222;
+  text-decoration: none;
+  display: block;
+  padding: 0.7em 0;
+}
+.menu ul li a p {
+  margin: 0;
+  padding: 0;
+  margin-left: 2em;
+}
+.menu ul li a:hover p {
+  margin-left: 2em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.menu li:hover {
+  box-shadow: 15em 0 rgba(52,152,219,0.2) inset;
+}
+.menu li:nth-child(1) a {
+  padding-top: 1em;
+}
+.menu li:last-child a {
+  padding-bottom: 1em;
+}
+.menu li:nth-child(2) a {
+  background-position: 0 -42px;
+}
+.menu li:nth-child(3) a {
+  background-position: 0 -84px;
+}
+.menu li:nth-child(4) a {
+  background-position: 0 -126px;
+}
+.menu li:nth-child(5) a {
+  background-position: 0 -168px;
+}
+/*FIN MENUList*/
+/*Posicion Responsive MenuList*/
+.languages {
+  background-size: cover;
   cursor: pointer;
-  left: 2em;
-  height: 30px;
-  position: absolute;
+  right: 2em;
+  height: 40px;
+  position: fixed;
   top: 2em;
-  width: 30px;
   z-index: 30;
+  display: none;
+}
+.languages ul {
+  margin: 0;
+  padding: 0;
+}
+.languages ul li {
+  display: inline-block;
+}
+/***
+
+  Wrapper for move the content when the menu is shown.
+**/
+.mobile-wrapper {
+  margin-left: 0;
+}
+.mobile-wrapper-active {
+  margin-left: -150px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
