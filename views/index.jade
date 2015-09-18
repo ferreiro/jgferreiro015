@@ -124,8 +124,8 @@ block content
 						<img src="assets/icons/skype.svg">
 				
 			.contact-form(style="display:none;")
-				h1 Tu por aquí, que bieeeen!
-				p Vale, te cuento. Puedes o elegir una fecha que te venga bien para hablar por skype o, si estás en madrid / planeas venir, elegir la opción de tomar algo. 
+				h1 Tu por aquí, ¡Qué alegría!
+				p ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás en madrid o planeas venir, elegir la opción de tomar algo. Cuando envíes el formulario te cuento más al otro lado, ¡Hasta ahora!
 
 				form(action='/mail', name='contactus', method='post', novalidate).contactForm
 					fieldset.contact-form-field
@@ -196,16 +196,16 @@ block content
 								<option value='2016'>2016</option>
 
 					fieldset.contact-form-field.contact-form-field-message
-						p.contact-form-field-text Elige una hora <span>(*obligatorio)</span>
+						p.contact-form-field-text Elige una hora <span>(*)</span>
 						.contact-form-field-element
 							//- keepInputValue class will keep the input value via javascript
 
 						select(name="time", required)
 							<option value='--:--'>--:--</option>
+							<option value='Otra'>¿Puede ser en otro momento?</option>
 							<option value='20:00'>20:00</option>
 							<option value='20:30'>20:30</option>
 							<option value='21:00'>21:00</option>
-							<option value='Otra'>¿Puede ser en otro momento?</option>
 
 					fieldset.contact-form-field.contact-form-field-message
 						p.contact-form-field-text Oye, entonces hemos quedado que tu eras de...?
@@ -220,7 +220,7 @@ block content
 						input(type="submit", value="¡Mandarlo!").button(style="padding:0.5em 1em;")
 
 			div#initialContactLayer
-				p Querido visitante, llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, hacerte una pregunta: ¿Te gustaría que hablásemos? Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Si tu respuesta es que ¡Sí!, te voy a facilitar <b>dos formas</b> para contactarnos. Si tu respuesta es que no, siempre nos quedará <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
+				p Llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, invitarte a conectarnos. Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Abajo te he puesto dos botones, para que nos pongamos en contacto. También estoy por <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
 
 				.contactBox-coffeSkype
 					a(href="#", class="contactBox-coffeSkype-coffee")
