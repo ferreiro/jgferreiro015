@@ -598,9 +598,14 @@ a:hover {
   margin: 0.3em 0;
   margin-right: -4px;
 }
-@media all and (max-width: mobileWidth) {
+@media all and (max-width: 799px) {
   .projects-entry {
-    width: 100%;
+    width: 50% !important;
+  }
+}
+@media all and (max-width: 450px) {
+  .projects-entry {
+    width: 100% !important;
   }
 }
 .projects-entry-int {
@@ -623,6 +628,11 @@ a:hover {
 }
 .projects-entry-logo img {
   width: 100%;
+}
+@media all and (max-width: 450px) {
+  .projects-entry-logo img {
+    margin-top: -10%;
+  }
 }
 .projects-entry-title {
   font-size: 1em;

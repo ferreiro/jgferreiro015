@@ -7,8 +7,10 @@
 	// <li>
 	&-entry
 		width:33.333%;
-		@media all and (max-width:mobileWidth)
-			width:100%;
+		@media all and (max-width:desktopWidth - 1px)
+			width:50% !important;
+		@media all and (max-width:450px)
+			width:100% !important;
 		display:inline-block;
 		vertical-align:top;
 		margin:0.3em 0;
@@ -31,6 +33,9 @@
 				display:block;
 			img
 				width:100%;
+				
+				@media all and (max-width:450px)
+					margin-top:-10%;
 		&-title
 			font-size:1em; 
 			margin-top:1em;
