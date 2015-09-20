@@ -10,10 +10,11 @@ var nodemailer = require('nodemailer'); // Nodemailer es un módulo externo de n
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+// Get home webpage
+// I use a REGEX when / and /es will load the same spanish view.
+// http://stackoverflow.com/questions/15350025/multiple-routes-single-function-call-express-js
 
-var spanish = ['/', 'es'];
-router.get( spanish , function(req, res, next) {
+router.get( '/:var(es)?' , function(req, res, next) {
 	res.render('index', {
 		title: 'Jorge Ferreiro - Programador full stack - Backend / frontend - node, javascript, less.js, jade. ',
 		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
