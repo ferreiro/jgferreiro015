@@ -14,6 +14,28 @@ block content
 				ul.menuTop-languages
 					li
 						a(href="/es") ¿Español?
-	h1= message
-	h2= error.status
-	pre #{error.stack}
+					li
+						a or
+					li
+						a(href="/en") English?
+
+
+	// A container is the basic structure of the webpage.
+	// Dicides the content in different blocks. Each container has a inner div, which allows you to place content respecting the webpage width Eg: 1000px
+
+	// Main header wallpaper with the background
+	section.container.bigHeader
+		.container-int
+			// Placed the content
+			.bigHeader-logo
+				a(href="/", title="Full stack Developer")
+					span(class="bigHeader-logo-image", title="Jorge Ferreiro")
+					h1(class="bigHeader-logo-text") Jorge Ferreiro
+					h2(class="bigHeader-logo-subtext") Full stack Programmer
+
+	// Main header wallpaper with the background
+	section.container
+		.container-int
+			h1= message
+			h2= error.status
+			pre #{error.stack}
