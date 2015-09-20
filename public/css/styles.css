@@ -429,6 +429,11 @@ a:hover {
   position: absolute;
   bottom: 0;
 }
+@media all and (max-width: 600px) {
+  .bigHeader-logo {
+    margin-left: 10px;
+  }
+}
 @media all and (min-width: 600px) {
   .bigHeader-logo {
     width: 260px;
