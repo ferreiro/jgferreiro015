@@ -12,10 +12,19 @@ var router = express.Router();
 
 /* GET home page. */
 
-router.get('/', function(req, res, next) {
+var spanish = ['/', 'es'];
+router.get( spanish , function(req, res, next) {
 	res.render('index', {
-		title: 'Jorge Ferreiro - Programador full stack - node, javascript, less.js, jade y más. Backend y frontend.',
-		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery',
+		title: 'Jorge Ferreiro - Programador full stack - Backend / frontend - node, javascript, less.js, jade. ',
+		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
+		special : false
+	});
+});
+
+router.get('/en', function(req, res, next) {
+	res.render('index_english', {
+		title: 'Jorge Ferreiro - Full-stack programmer - Backend / frontend - node, javascript, less.js, jade. ',
+		description : 'Full-stack programmer. Node, javascript, HTML5, CSS3, JQuery. Backend developer and frontend developer',
 		special : false
 	});
 });

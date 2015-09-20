@@ -1,0 +1,231 @@
+extends layout
+
+block content
+
+
+	.loader
+
+	// Menu
+	.menuTop
+		.menuTop-int
+			.menuTop-logo
+				a(href='/')
+					span.menuTop-logo-image(title='Jorge Ferreiro')
+
+			.menuTop-box
+				ul.menuTop-languages
+					li
+						a(href="/es") ¿Español?
+
+
+	// A container is the basic structure of the webpage.
+	// Dicides the content in different blocks. Each container has a inner div, which allows you to place content respecting the webpage width Eg: 1000px
+
+	// Main header wallpaper with the background
+	section.container.bigHeader
+		.container-int
+			// Placed the content
+			.bigHeader-logo
+				a(href="/", title="Full stack Developer")
+					span(class="bigHeader-logo-image", title="Jorge Ferreiro")
+					h1(class="bigHeader-logo-text") Jorge Ferreiro
+					h2(class="bigHeader-logo-subtext") Programador web full stack
+
+	// Main header wallpaper with the background
+	section.container#about
+		.container-int
+				// Placed the content
+				.content-bio
+					h3.subtitle ¿Quién soy yo?
+					p.paragraph ¡Hola! Soy Jorge Ferreiro, <b>programador</b> full-stack y <b>estudiante</b> de Ingeniería Informática. Con el término Full-stack, me refiero a que puedo desarrollar tanto la parte visual de una web (frontend), como todo lo que hay detras: páginas, modelos, rutas, bases de datos... Lo que se conoce como backend, vaya.
+					p.paragraph Trabajo como freelance diseñando páginas web, APIs y aplicaciones web desde cero. También puedo involucrarme a tiempo parcial. En mi tiempo libre (no mucho la verdad) produzco música y tomo fotografías.
+					p.paragraph Soy autodidacta desde pequeño. Siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Las tres aptitudes que destaco son: capacidad de aprender, constancia y pasión por lo que hago.
+					p.paragraph Sí, ¡me gustan los retos y cumplir objetivos!.
+
+	if(special)
+		div(style="width:300px; height:150px; position:fixed; right:0; bottom:0; z-index:100;")
+			script(type="text/javascript").
+				alert("Hola! Esta es una versión especial de la web. No tendrás que LEER NADA, varios audio grabados con loquendo te narrarán todo mi contenido.")
+
+			<iframe width="100%" height="150px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/ferreirostartups/sets/segunda-version-de-los-textos&amp;auto_play=true&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+	section.container.skills-block
+		.container-int
+			h3.subtitle Skills y conocimientos
+
+			ul.skills
+				li.skills-entry
+					span.skills-entry-logo
+						img(src="assets/icons/javascript.svg", width="40px", title="Javascript", alt="JAVASCRIPT")
+					p.skills-entry-text Javascript
+
+				li.skills-entry
+					span.skills-entry-logo
+						img(src="assets/icons/node.png", width="40px", title="HTML5", alt="HTML5")
+					p.skills-entry-text Node.js
+
+				li.skills-entry
+					span.skills-entry-logo 
+						img(src="assets/icons/saas.svg", title="HTML5", alt="HTML5")
+					p.skills-entry-text Less, stylus &amp; saas.
+					
+				li.skills-entry
+					span.skills-entry-logo 
+						img(src="assets/icons/html5.svg", title="HTML5", alt="HTML5")
+					p.skills-entry-text HTML5
+					
+				li.skills-entry
+					span.skills-entry-logo
+						img(src="assets/icons/css3.svg", title="HTML5", alt="HTML5")
+					p.skills-entry-text CSS3
+
+				li.skills-entry
+					span.skills-entry-logo
+						img(src="assets/icons/github.svg", title="GIT", alt="GIT")
+					p.skills-entry-text Git
+			
+
+			div(style="position:relative;")#skillsExplanation
+				p.paragraph En el <u>frontend</u> utilizo HTML5, javascript y CSS3. También less.js, stylus o saas como pre-procesares de estilos y jade.js para generación de vistas.
+				p.paragraph Para el <u>backend</u>, programo en javascript del lado del servidor (aka. <a href="http://hipertextual.com/archivo/2014/04/nodejs-javascript-servidor/" target="_blank">NODE.JS</a>). He programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje.
+				p.paragraph <b>¿Qué estoy aprendiendo?</b> Angular.js y profundizando en NoSQL.
+				a(href="#projects").close#goProjects OK! Sigamos
+
+	section#projects.container
+		.container-int
+
+			.content-bio
+				h3.subtitle Proyectos personales
+				p.paragraph Cuando tengo ideas, me encanta hacerlas realidad. Aquí te iré poniendo nuevos proyectos que vaya sacando o en los que esté involucrado con otros colegas.
+
+				ul.projects
+					li.projects-entry
+						.projects-entry-int
+							.projects-entry-logo
+								a(href="http://www.music4deejays.com", target="_blank")
+									img(src="assets/images/m4d.jpg")
+							
+							h3.projects-entry-title
+								a(href="http://www.music4deejays.com", target="_blank") Music4deejays
+							h4.projects-entry-subtitle CTO/Founder 
+							p.projects-entry-date Oct 2014-actualidad</p>
+							p.projects-entry-info Promocionamos a músicos y artistas con  talento para convertirles en números uno y darles su oportunidad.</p>
+							a.projects-entry-link(href="http://www.music4deejays.com", target="_blank") Ver proyecto
+
+
+	section#contact.container.contact
+		.container-int
+
+			.contactBox
+				.contactBox-rounds
+					.contactBox-rounds-box(style="background-color:rgba(179, 130, 76, 0.8);")
+						<img src="assets/icons/coffee.svg">
+					.contactBox-rounds-box
+						<img src="assets/icons/skype.svg">
+				
+			.contact-form(style="display:none;")
+				h1 Tu por aquí, ¡Qué alegría!
+				p ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás en madrid o planeas venir, elegir la opción de tomar algo. Cuando envíes el formulario te cuento más al otro lado, ¡Hasta ahora!
+
+				form(action='/mail', name='contactus', method='post', novalidate).contactForm
+					fieldset.contact-form-field
+						p.contact-form-field-text Nombre <span>* (obligatorio, al menos 2 caracteres)</span>
+						.contact-form-field-element
+							//- keepInputValue class will keep the input value via javascript
+							input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required).contact-form-name
+					
+					fieldset.contact-form-field
+						p.contact-form-field-text Email <span>* (obligatorio)</span>
+						.contact-form-field-element
+							//- keepInputValue class will keep the input value via javascript
+							input.keepInputValue(type='email', name='email', placeholder='¿A qué correo te puedo responder?' required).contact-form-field-element-input 
+					
+					fieldset.contact-form-field.contact-form-field-subject
+						p.contact-form-field-text ¿Qué día te viene bien? <span>(Ejemplo 16 de Abril)</span>
+						.contact-form-field-element
+							select(name="day", required).contact-form-field-element-select
+								<option value='01'>01</option>
+								<option value='02'>02</option>
+								<option value='03'>03</option>
+								<option value='04'>04</option>
+								<option value='05'>05</option>
+								<option value='06'>06</option>
+								<option value='07'>07</option>
+								<option value='08'>08</option>
+								<option value='09'>09</option>
+								<option value='10'>10</option>
+								<option value='11'>11</option>
+								<option value='12'>12</option>
+								<option value='13'>13</option>
+								<option value='14'>14</option>
+								<option value='15'>15</option>
+								<option value='16'>16</option>
+								<option value='17'>17</option>
+								<option value='18'>18</option>
+								<option value='19'>19</option>
+								<option value='20'>20</option>
+								<option value='21'>21</option>
+								<option value='22'>22</option>
+								<option value='23'>23</option>
+								<option value='24'>24</option>
+								<option value='25'>25</option>
+								<option value='26'>26</option>
+								<option value='27'>27</option>
+								<option value='28'>28</option>
+								<option value='29'>29</option>
+								<option value='30'>30</option>
+								<option value='31'>31</option>
+							</select>
+
+							select(name="month", required)
+								<option value='01'>January</option>
+								<option value='02'>February</option>
+								<option value='03'>March</option>
+								<option value='04'>April</option>
+								<option value='05'>May</option>
+								<option value='06'>June</option>
+								<option value='07'>July</option>
+								<option value='08'>August</option>
+								<option value='09'>September</option>
+								<option value='10'>October</option>
+								<option value='11'>November</option>
+								<option value='12'>December</option>
+			
+							select(name="year", required)
+								<option value='2015'>2015</option>
+								<option value='2016'>2016</option>
+
+					fieldset.contact-form-field.contact-form-field-message
+						p.contact-form-field-text Elige una hora <span>(*)</span>
+						.contact-form-field-element
+							//- keepInputValue class will keep the input value via javascript
+
+						select(name="time", required)
+							<option value='--:--'>--:--</option>
+							<option value='Otra'>¿Puede ser en otro momento?</option>
+							<option value='20:00'>20:00</option>
+							<option value='20:30'>20:30</option>
+							<option value='21:00'>21:00</option>
+
+					fieldset.contact-form-field.contact-form-field-message
+						p.contact-form-field-text Oye, entonces hemos quedado que tu eras de...?
+						.contact-form-field-element
+							//- keepInputValue class will keep the input value via javascript
+
+						select(name="type", required)
+							<option value='Tomar algo'>Tomar algo</option>
+							<option value='Skype'>Skype/Hangouts</option> 
+
+					fieldset.contact-form-field.contact-form-field-button(style="padding:1.5em 0; text-align:center;")
+						input(type="submit", value="¡Mandarlo!").button(style="padding:0.5em 1em;")
+
+			div#initialContactLayer
+				p Llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, invitarte a conectarnos. Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Abajo te he puesto dos botones para que eligas. Si te va más lo social, hablamos por <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
+
+				.contactBox-coffeSkype
+					a(href="#", class="contactBox-coffeSkype-coffee")
+						p <!-- Texts are placed via :before on css -->
+					span o
+					a(href="#", class="contactBox-coffeSkype-skype")
+						p <!-- Texts are placed via :before on css -->
+
