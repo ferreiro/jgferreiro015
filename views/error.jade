@@ -1,6 +1,19 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	.loader
+
+	// Menu
+	.menuTop
+		.menuTop-int
+			.menuTop-logo
+				a(href='/')
+					span.menuTop-logo-image(title='Jorge Ferreiro')
+
+			.menuTop-box
+				ul.menuTop-languages
+					li
+						a(href="/es") ¿Español?
+	h1= message
+	h2= error.status
+	pre #{error.stack}
