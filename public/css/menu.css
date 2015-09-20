@@ -99,8 +99,13 @@
   margin-left: 0.5em;
 }
 .menuTop-languages li a {
-  padding: 1.4em 0;
+  padding: 1.5em 0;
+  padding-bottom: 1.2em;
   display: block;
+}
+.menuTop-languages li a img {
+  height: 16px;
+  margin-right: 10px;
 }
 .menuTop-button {
   width: 35px;

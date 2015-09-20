@@ -211,8 +211,13 @@ a:hover {
   margin-left: 0.5em;
 }
 .menuTop-languages li a {
-  padding: 1.4em 0;
+  padding: 1.5em 0;
+  padding-bottom: 1.2em;
   display: block;
+}
+.menuTop-languages li a img {
+  height: 16px;
+  margin-right: 10px;
 }
 .menuTop-button {
   width: 35px;
@@ -389,7 +394,7 @@ a:hover {
 @media all and (min-width: 600px) {
   .bigHeader {
     height: 260px;
-    background-image: url("../images/jorge_ferreiro_medium_NEW.jpg");
+    background-image: url("../images/jorge_ferreiro_medium_NEW_mask.png");
     background-position: 70% 50%;
   }
   .bigHeader .container-int {
