@@ -404,7 +404,7 @@ a:hover {
 @media all and (min-width: 600px) {
   .bigHeader {
     height: 260px;
-    background-image: url("../images/jorge_ferreiro_medium_NEW_mask.png");
+    background-image: url("../images/jorge_ferreiro_medium_NEW.jpg");
     background-position: 70% 50%;
   }
   .bigHeader .container-int {
@@ -646,7 +646,7 @@ a:hover {
 }
 @media all and (max-width: 450px) {
   .projects-entry-logo img {
-    margin-top: -10%;
+    margin-top: -3%;
   }
 }
 .projects-entry-title {

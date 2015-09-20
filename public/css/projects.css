@@ -43,7 +43,7 @@
 }
 @media all and (max-width: 450px) {
   .projects-entry-logo img {
-    margin-top: -10%;
+    margin-top: -3%;
   }
 }
 .projects-entry-title {
