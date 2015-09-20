@@ -93,15 +93,23 @@
       padding:0;
       display:block; 
       li
-         float:left;
-         margin-left:0.5em;
-         a
-            padding:1.5em 0;
-            padding-bottom:1.2em;
-            display:block;
-            img
-                height:16px;
-                margin-right:10px;
+          height 100%
+          float:left;
+          margin-left:0.5em; 
+          a
+              padding:1.5em 1em;
+              margin-right: -1em;
+              padding-bottom:1.0em;
+              display:block;
+              span
+                  @media all and (max-width: tabletWidth)
+                      display none
+              img
+                  height:16px;
+                  margin-right:7px;
+                  -webkit-border-radius: 2px;
+                  -moz-border-radius: 2px;
+                  border-radius: 2px;
 
    // Mobile menu button
    &-button
