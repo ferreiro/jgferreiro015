@@ -28,7 +28,7 @@ app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('¡Hola! Lo siento, pero la página que buscas no la encuentro :-(. ¿Puedes mirar por mi si la url está bien?. Si ves que la URl debería de funcionar. Por fa, enviame un correo a: me@jgferreiro.com. ¡Gracias!');
   err.status = 404;
   next(err);
 });
