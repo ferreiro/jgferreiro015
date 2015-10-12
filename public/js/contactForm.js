@@ -8,7 +8,6 @@ $('form').submit(function(event){
     var data, email, name;
     event.preventDefault()
   
-    $('#formLoader').fadeIn(500); // show loader
     $('#messageFailure').fadeOut("slow") // hide message fail
 
     name = $('input[name="name"]');
@@ -29,34 +28,40 @@ $('form').submit(function(event){
 
     if (validName && validEmail) {
 
+        $('#contactForm').slideUp(300);
+        $('#formLoader').delay(300).fadeIn(300); // show loader
+
         $.ajax({
             type        : 'POST',       // define the type of HTTP verb we want to use (POST for our form)
-            url         : '/contact', // the url where we want to POST
+            url         : '/co2ntact', // the url where we want to POST
             dataType    : 'json',       // what type of userData do we expect back from the server
             data        : data,     // our userData object
             encode      : true
         })
         .done(function(returnObject) {
 
-            $('#contactForm').fadeOut(500);
+            $('#formLoader').delay(300).fadeOut(300);
             $('#userName').html(data.name)
             $('#userMail').html(data.email)
 
             if (returnObject.data.error) {
-                $('#messageFailure').delay(500).fadeIn("slow") 
-                $('#contactForm').show(0);  // show the form again
+                $('#messageFailure').delay(1000).fadeIn("slow") 
+                $('#contactForm').delay(500).slideDown(300); // show the form again
             }
             else {
-                $('#messageSuccess').delay(500).show(0) 
+                $('#messageSuccess').delay(1000).fadeIn(500)
             }
         })
         .fail(function(returnObject) {
-            alert('Internal error on our server')
+            $('#formLoader').delay(300).fadeOut(300);
             $('#messageFailure').delay(500).fadeIn("slow") 
-            $('#contactForm').show(0);  // show the form again
+            $('#contactForm').delay(500).slideDown(300); // show the form again
         })
         .always(function(returnObject) {
-            $('#formLoader').hide(500);
+            // always go to the contact div
+            $('html, body').animate({ 
+                scrollTop: $('#contact').offset().top
+            }, 'slow');
         });
 
     }

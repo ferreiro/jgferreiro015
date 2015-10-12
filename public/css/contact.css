@@ -137,6 +137,9 @@
   margin: 0 1.5em;
   color: #fff;
 }
+#formLoader {
+  display: none;
+}
 .contactLoader {
   width: 100%;
   height: 100px;
@@ -145,7 +148,6 @@
   background-size: 60px auto;
   background-position: 50% 50%;
   z-index: 1000;
-  display: none;
 }
 .contactFieldset {
   width: 100%;
