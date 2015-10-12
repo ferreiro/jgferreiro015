@@ -604,7 +604,6 @@ a:hover {
 .projects {
   width: 100%;
   margin-bottom: 2em;
-  margin-left: -0.3em;
 }
 .projects-entry {
   width: 33.333%;
@@ -624,7 +623,7 @@ a:hover {
   }
 }
 .projects-entry-int {
-  margin: 0 0.5em;
+  margin-right: 1.2em;
 }
 .projects-entry-logo {
   width: 100%;
