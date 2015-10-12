@@ -31,7 +31,7 @@ $('#contactForm').submit(function(event){
 
         $.ajax({
             type        : 'POST',       // define the type of HTTP verb we want to use (POST for our form)
-            url         : '/mail', // the url where we want to POST
+            url         : '/contact', // the url where we want to POST
             dataType    : 'json',       // what type of userData do we expect back from the server
             data        : data,     // our userData object
             encode      : true

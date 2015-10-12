@@ -42,7 +42,7 @@ router.get('/adaptada', function(req, res, next) {
 	});
 });
 
-router.post('/mail', function (req, res) {
+router.post('/contact', function (req, res) {
     var form; // keep the form data in one variable
     var transporter; // mail variables. 
     var msg; // Body message to send the user.
@@ -76,8 +76,8 @@ router.post('/mail', function (req, res) {
 	msg =  '<html><body style="background: #F8F8F8; margin:0; padding:1em 2em;">';
 	msg += '<h3>Mensaje</h3>';
 	msg += '<p style="font-size:16px;">';
-	msg += 'Nombre: '   + form.name +'<br /> ';
-	msg += 'Email: ' + form.email + '<br />';
+	msg += 'Nombre: '  + form.name +'<br /> ';
+	msg += 'Email: '   + form.email + '<br />';
 	msg += 'Date: '    + form.day + '/' + form.month + '/' + form.year + '<br />'; 
 	msg += 'Time: '    + form.time + '<br />'; 
 	msg += 'Plan: '    + form.plan + '<br />';
