@@ -144,7 +144,7 @@ block content
 				
 			.messageSent#messageSuccess
 				// .whiteBackground
-				p <span id="userName"></span> Tu mensaje ha sido enviado con éxito. Te respondo en cuanto pueda al correo <span id="userMail"></span>
+				p <span id="userName"></span> Tu mensaje ha sido enviado con éxito. Te respondo en cuanto pueda a tu correo <span id="userMail"></span>
 
 			#formLoader
 				.contactLoader
@@ -220,7 +220,7 @@ block content
 							option(value='November') Noviembre
 							option(value='December') Diciembre
 						
-						select(name="year", required).contactFieldset-select(style="margin-right:0;")
+						select(name="year", style="margin-right:0;", required).contactFieldset-select
 							option(value='2015') 2015
 							option(value='2016') 2016
 
@@ -244,7 +244,7 @@ block content
 						input(type="submit", value="¡Mandarlo!").contactFieldset-submit
 
 			div#initialContactLayer
-				p Llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, invitarte a conectarnos. Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Abajo te he puesto dos botones para que eligas. Si te va más lo social, hablamos por <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
+				p Llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, invitarte a conectarnos. Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo. Elige una de las dos opciones, ¡hasta ahora!
 
 				.contactBox-coffeSkype
 					a(href="#", class="contactBox-coffeSkype-coffee").open-contactForm

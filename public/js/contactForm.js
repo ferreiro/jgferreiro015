@@ -33,14 +33,14 @@ $('form').submit(function(event){
 
         $.ajax({
             type        : 'POST',       // define the type of HTTP verb we want to use (POST for our form)
-            url         : '/co2ntact', // the url where we want to POST
+            url         : '/contact', // the url where we want to POST
             dataType    : 'json',       // what type of userData do we expect back from the server
             data        : data,     // our userData object
             encode      : true
         })
         .done(function(returnObject) {
-
-            $('#formLoader').delay(300).fadeOut(300);
+ 
+            $('#formLoader').delay(300).fadeOut(300); 
             $('#userName').html(data.name)
             $('#userMail').html(data.email)
 
