@@ -4,7 +4,7 @@ $('.open-contactForm').click(function() {
     }, 'slow');
 });
 
-$('#contactForm').submit(function(event){
+$('form').submit(function(event){
     var data, email, name;
     event.preventDefault()
   
