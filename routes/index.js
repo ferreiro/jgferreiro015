@@ -54,11 +54,10 @@ router.post('/contact', function(req, res) {
 	    month: req.body.month,
 	    year: req.body.year,
 	    time: req.body.time,
-	    plan: req.body.plan,
-	    error: false
+	    plan: req.body.plan
 	}  
 
-	res.json({"error": false}); // We pass the form object we created before
+	res.json({"error": "false"}); // We pass the form object we created before
  
 });
 /*
