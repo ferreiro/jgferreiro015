@@ -132,6 +132,7 @@
   width: 100px;
   display: inline-block;
   text-align: left;
+  float: left;
 }
 .contactFieldset-input {
   padding: 0.5em 1em;
@@ -145,6 +146,14 @@
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+@media all and (max-width: desktopWidth) {
+  .contactFieldset-input {
+    padding-left: 0;
+    text-indent: 20px;
+    padding-right: 0;
+    width: 100% !important;
+  }
+}
 @media all and (min-width: tabletWidth) {
   .contactFieldset-input {
     width: 400px !important;
@@ -156,6 +165,33 @@
   }
 }
 .contactFieldset-input:focus {
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(50,50,50,0.4);
+  box-shadow: 0px 0px 3px 0px rgba(50,50,50,0.4);
+}
+.contactFieldset-unified {
+  min-width: 300px;
+}
+.contactFieldset-select {
+  margin-right: 1em;
+  padding: 0.5em 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  outline: 0;
+  border: 0;
+  background: #fff;
+}
+@media all and (max-width: tabletWidth) {
+  .contactFieldset-select {
+    padding-left: 0;
+    text-indent: 20px;
+    padding-right: 0;
+    margin-bottom: 1em;
+    width: 100% !important;
+  }
+}
+.contactFieldset-select:focus {
   -webkit-box-shadow: 0px 0px 3px 0px rgba(50,50,50,0.4);
   -moz-box-shadow: 0px 0px 3px 0px rgba(50,50,50,0.4);
   box-shadow: 0px 0px 3px 0px rgba(50,50,50,0.4);
