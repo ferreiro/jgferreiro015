@@ -43,25 +43,7 @@ router.get('/adaptada', function(req, res, next) {
 	});
 });
 
-router.post('/contact', function(req, res) {
-	var form;
-
-	form = {
-		subject: 'Tomar algo con Jorge',
-	    name: req.body.name,
-	    email: req.body.email,
-	    day: req.body.day,
-	    month: req.body.month,
-	    year: req.body.year,
-	    time: req.body.time,
-	    plan: req.body.plan
-	}  
-
-	res.json({"error": "false"}); // We pass the form object we created before
- 
-});
-/*
-router.post('/contact2', function (req, res, next) {
+router.post('/contact', function (req, res, next) {
     var form; // keep the form data in one variable
     var transporter; // mail variables. 
     var msg; // Body message to send the user.
@@ -123,8 +105,5 @@ router.post('/contact2', function (req, res, next) {
     });  
     
 });  
-*/
-
-
 
 module.exports = router;
