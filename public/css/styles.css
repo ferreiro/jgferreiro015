@@ -854,6 +854,9 @@ a:hover {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+.contactFieldset-input-error {
+  border: 1px solid #f00;
+}
 @media all and (max-width: 800px) {
   .contactFieldset-input {
     padding-left: 0;

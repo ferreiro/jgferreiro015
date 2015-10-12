@@ -163,12 +163,12 @@ block content
 					fieldset.contactFieldset
 						// legend Nombre * (obligatorio, al menos 2 caracteres)
 						label(for="the_name").contactFieldset-label Nombre
-						input(type='name', id='the_name', name='name', placeholder='¿Cómo te llamas?', required).contactFieldset-input
+						input(type='name', id='the_name', name='name', placeholder='¿Cómo te llamas?').contactFieldset-input
 					
 					fieldset.contactFieldset
 						// legend Email * (te responderé a esta dirección)
 						label(for="email").contactFieldset-label  Email
-						input(type='email', id='email', name='email', placeholder='¿Cual es tu email?', required).contactFieldset-input
+						input(type='name', id='email', name='email', placeholder='¿Cual es tu email?', required).contactFieldset-input
 
 					fieldset.contactFieldset
 						// legend ¿Qué día te viene bien? (Ejemplo 16 de Abril)
@@ -247,9 +247,9 @@ block content
 				p Llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, invitarte a conectarnos. Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Abajo te he puesto dos botones para que eligas. Si te va más lo social, hablamos por <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
 
 				.contactBox-coffeSkype
-					a(href="#", class="contactBox-coffeSkype-coffee")
+					a(href="#", class="contactBox-coffeSkype-coffee").open-contactForm
 						p <!-- Texts are placed via :before on css -->
 					span o
-					a(href="#", class="contactBox-coffeSkype-skype")
+					a(href="#", class="contactBox-coffeSkype-skype").open-contactForm
 						p <!-- Texts are placed via :before on css -->
 
