@@ -1,44 +1,49 @@
 $('form').submit(function(event){
-    var name, email, date, time, plan; // input data.
+    var name, email, date, time, plan; // input userData.
     event.preventDefault()
-
-    name  = $('input[name="name"]').val();
-    email = $('input[name="email"]').val();
-    date  = $('input[name="date"]').val();
-    time  = $('select[name="time"]').val();
-    plan  = $('select[name="plan"]').val();
+    
+    name = $('input[name="name"]').val();
 
     data = {
         "name" : name,
-        "email" : email,
-        "date" : date,
-        "time" : time,
-        "plan" : plan
+        "email" : $('input[name="email"]').val(),
+        "day" : $('select[name="day"]').val(),
+        "month" : $('select[name="month"]').val(),
+        "year" : $('select[name="year"]').val(),
+        "time" : $('select[name="time"]').val(),
+        "plan" : $('select[name="plan"]').val()
     }
 
     $('#formLoader').fadeIn(500);
     $('#messageFailure').fadeOut("slow")
 
     $.ajax({
-        type        : 'POST',       // define the type of HTTP verb we want to use (POST for our form)
+        type        : 'post',       // define the type of HTTP verb we want to use (POST for our form)
         url         : '/mail', // the url where we want to POST
-        data        : data,     // our data object
-        dataType    : 'json',       // what type of data do we expect back from the server
+        dataType    : 'json',       // what type of userData do we expect back from the server
+        data        : data,     // our userData object
         encode      : true
     })
-    .done(function(messageData) {
+    .done(function(returnObject) {
         $('#contactForm').fadeOut(500);
-        console.log(messageData) 
         $('#userName').html(data.name)
         $('#userMail').html(data.email)
-        $('#messageSuccess').delay(500).show(0) 
-        // $('#initialContactLayer').delay(500).fadeIn("slow")  
+
+        if (returnObject.data.error) {
+            $('#messageFailure').delay(500).fadeIn("slow") 
+            $('#contactForm').show(0);  // show the form again
+        }
+        else {
+            $('#messageSuccess').delay(500).show(0) 
+            // $('#initialContactLayer').delay(500).fadeIn("slow")  
+        }
     })
-    .fail(function(returnedData) {
+    .fail(function(returnObject) {
+        alert('Internal error on our server')
         $('#messageFailure').delay(500).fadeIn("slow") 
         $('#contactForm').show(0);  // show the form again
     })
-    .always(function(returnedData) {
+    .always(function(returnObject) {
         $('#formLoader').hide(500);
     });
 

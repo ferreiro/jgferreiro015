@@ -4,9 +4,6 @@
 //------------------------------
 
 var nodemailer = require('nodemailer'); // Nodemailer es un módulo externo de node que nos permite mandar correos.
-
-
-
 var express = require('express');
 var router = express.Router();
 
@@ -30,6 +27,13 @@ router.get('/en', function(req, res, next) {
 	});
 });
 
+router.get( '/en/contact' , function(req, res, next) {
+	res.render('contact', {
+		title: 'Jorge Ferreiro - Programador full stack - Backend / frontend - node, javascript, less.js, jade. ',
+		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
+		special : false
+	});
+});
 router.get('/adaptada', function(req, res, next) {
 	res.render('index', {
 		title: 'Jorge Ferreiro - Programador full stack - node, javascript, less.js, jade y más. Backend y frontend.',
@@ -40,8 +44,8 @@ router.get('/adaptada', function(req, res, next) {
 
 router.post('/mail', function (req, res) {
     var form; // keep the form data in one variable
-    var transporter, mailMSG; // mail variables. 
-    var err;
+    var transporter; // mail variables. 
+    var msg; // Body message to send the user.
 
     // Creating a form object and saving the &_POST data.
     // req.body also is an object with the same data  var form = req.body.
@@ -51,12 +55,13 @@ router.post('/mail', function (req, res) {
     	subject: 'Tomar algo con Jorge',
         name: req.body.name,
         email: req.body.email,
-        date: req.body.date,
+        day: req.body.day,
+        month: req.body.month,
+        year: req.body.year,
         time: req.body.time,
         plan: req.body.plan,
-        error: "message sent"
-    } 
-
+        error: false
+    }  
 
 	// Create reusable transporter object using SMTP transport
 	transporter = nodemailer.createTransport({
@@ -68,16 +73,16 @@ router.post('/mail', function (req, res) {
 	}); 
 
 	// Preparing email message
-	mailMSG =  '<html><body style="background: #F8F8F8; margin:0; padding:1em 2em;">';
-	mailMSG += '<h3>Mensaje</h3>';
-	mailMSG += '<p style="font-size:16px;">';
-	mailMSG += 'Nombre: '   + form.name +'<br /> ';
-	mailMSG += 'Email: ' + form.email + '<br />';
-	mailMSG += 'Date: '    + form.date + '<br />'; 
-	mailMSG += 'Time: '    + form.time + '<br />'; 
-	mailMSG += 'Plan: '    + form.plan + '<br />';
-	mailMSG += '</p>'; 
-	mailMSG += '</body></html>';
+	msg =  '<html><body style="background: #F8F8F8; margin:0; padding:1em 2em;">';
+	msg += '<h3>Mensaje</h3>';
+	msg += '<p style="font-size:16px;">';
+	msg += 'Nombre: '   + form.name +'<br /> ';
+	msg += 'Email: ' + form.email + '<br />';
+	msg += 'Date: '    + form.day + '/' + form.month + '/' + form.year + '<br />'; 
+	msg += 'Time: '    + form.time + '<br />'; 
+	msg += 'Plan: '    + form.plan + '<br />';
+	msg += '</p>'; 
+	msg += '</body></html>';
 
 	// Setup e-mail data with unicode symbols
 	var mailOptions = {
@@ -85,19 +90,17 @@ router.post('/mail', function (req, res) {
 	    to: 'me@jgferreiro.com, ferreirostartups@gmail.com', // list of receivers
 	    replyTo: form.email,
 	    subject: 'Mensaje de ' + form.name + ' - ' + form.subject, // Subject line
-	    html: mailMSG // html body
+	    html: msg // html body
 	};
 
 	// Send mail with defined transport object
 	transporter.sendMail(mailOptions, function(error, info) {
-		if (error){
-			form.error = "Message not sent, error."; // True: error on the email | false: everything is ok
-		}
+		form.error = error; // True: error on the email | false: everything is ok
 	});
     	  
     // Devolver JSON para cuando se haga un formulario ajax.
     res.json({ 
-        messageData: form          // We pass the form object we created before
+        data: form          // We pass the form object we created before
     });  
     
 });  
