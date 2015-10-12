@@ -38,7 +38,7 @@ $('form').submit(function(event){
         })
         .done(function(returnObject) {
 
-            $('#contactForm').slideDown(500);
+            $('#contactForm').slideUp(500);
             $('#userName').html(data.name)
             $('#userMail').html(data.email)
 
