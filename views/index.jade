@@ -57,40 +57,58 @@ block content
 			ul.skills
 				li.skills-entry
 					span.skills-entry-logo
-						img(src="assets/icons/javascript.svg", width="40px", title="Javascript", alt="JAVASCRIPT")
-					p.skills-entry-text Javascript
+						img(src="assets/icons/javascript.svg", width="40px", title="Programador freelance Javascript", alt="Javascript")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/JavaScript", target="_blank") Javascript
 
 				li.skills-entry
 					span.skills-entry-logo
-						img(src="assets/icons/node.png", width="40px", title="HTML5", alt="HTML5")
-					p.skills-entry-text Node.js
+						img(src="assets/icons/node.png", width="40px", title="Programador freelance Node.js", alt="Node.js")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/Node.js", target="_blank") Node.js
 
 				li.skills-entry
 					span.skills-entry-logo 
-						img(src="assets/icons/saas.svg", title="HTML5", alt="HTML5")
-					p.skills-entry-text Less, stylus &amp; saas.
+						img(src="assets/icons/python.png", title="Programador freelance Python", alt="Programador freelance Python")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/Python", target="_blank") Python
 					
 				li.skills-entry
 					span.skills-entry-logo 
-						img(src="assets/icons/html5.svg", title="HTML5", alt="HTML5")
-					p.skills-entry-text HTML5
+						img(src="assets/icons/html5.svg", title="Programador freelance HTML5", alt="HTML5")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/HTML5", target="_blank") HTML5
 					
 				li.skills-entry
 					span.skills-entry-logo
-						img(src="assets/icons/css3.svg", title="HTML5", alt="HTML5")
-					p.skills-entry-text CSS3
+						img(src="assets/icons/css3.svg", title="Diseñador freelance CSS3", alt="CSS3")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada#CSS3", target="_blank") CSS3
+
+				li.skills-entry
+					span.skills-entry-logo 
+						img(src="assets/icons/saas.svg", title="Preprocesadores CSS3: less.js, stylus y saas", alt="HTML5")
+					p.skills-entry-text
+						a(href="http://apuntesalmargen.com/beneficios-de-los-pre-procesadores-de-css.html", target="_blank") Less, stylus &amp; saas.
+					
+				li.skills-entry
+					span.skills-entry-logo
+						img(src="assets/icons/bash.png", title="Programador freelance en bash", alt="Bash")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/Bash", target="_blank") Bash
 
 				li.skills-entry
 					span.skills-entry-logo
-						img(src="assets/icons/github.svg", title="GIT", alt="GIT")
-					p.skills-entry-text Git
+						img(src="assets/icons/git.png", title="GIT", alt="GIT")
+					p.skills-entry-text
+						a(href="https://es.wikipedia.org/wiki/Git", target="_blank") Git
 			
 
 			div(style="position:relative;")#skillsExplanation
-				p.paragraph En el <u>frontend</u> utilizo HTML5, javascript y CSS3. También less.js, stylus o saas como pre-procesares de estilos y jade.js para generación de vistas.
-				p.paragraph Para el <u>backend</u>, programo en javascript del lado del servidor (aka. <a href="http://hipertextual.com/archivo/2014/04/nodejs-javascript-servidor/" target="_blank">NODE.JS</a>). He programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje.
+				p.paragraph En el <strong><u>frontend</u></strong> utilizo HTML5, javascript y CSS3. También less.js, stylus o saas como pre-procesares de estilos y jade.js para generación de vistas.
+				p.paragraph Para el <strong><u>backend</u></strong>, programo en javascript del lado del servidor (aka. <a href="http://hipertextual.com/archivo/2014/04/nodejs-javascript-servidor/" target="_blank">NODE.JS</a>). He programado bastante en c++ y java, pero no son lenguajes que a día de hoy trabaje.
 				p.paragraph <b>¿Qué estoy aprendiendo?</b> Angular.js y profundizando en NoSQL.
-				a(href="#projects").close#goProjects OK! Sigamos
+				// a(href="#projects").close#goProjects OK! Sigamos
 
 	section#projects.container
 		.container-int
@@ -109,7 +127,7 @@ block content
 							h3.projects-entry-title
 								a(href="http://www.music4deejays.com", target="_blank") Music4deejays
 							h4.projects-entry-subtitle CTO/Founder 
-							p.projects-entry-date Oct 2014-actualidad
+							p.projects-entry-date May 2014-Oct 2015 (1 año y 6 meses)
 							p.projects-entry-info Promocionamos a músicos y artistas con  talento para convertirles en números uno y darles su oportunidad.
 							a.projects-entry-link(href="http://www.music4deejays.com", target="_blank") Ver proyecto
 
@@ -125,17 +143,20 @@ block content
 						<img src="assets/icons/skype.svg">
 				
 			.messageSent#messageSuccess
-				p Tu mensaje ha sido enviado con éxito, gracias!
-			.messageSent#messageFailure
-				p Tu mensaje ha sido enviado con éxito, gracias!
-
+				// .whiteBackground
+				p <span id="userName"></span> Tu mensaje ha sido enviado con éxito. Te respondo en cuanto pueda al correo <span id="userMail"></span>
 
 			#formLoader
 				.contactLoader
 
 			.contact-form(style="display:none;")#contactForm
+				
 				// h1 Tu por aquí, ¡Qué alegría!
 				p(style="margin-bottom:1em;") ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás por madrid (o planeas venir), elegir la opción de tomar algo. Cuando envíes el formulario te responderé concretando el encuentro ¡Hasta ahora!
+
+				.messageSent.messageSent-warning#messageFailure(style="margin-bottom:2em;")
+					// .whiteBackground
+					p Tu mensaje no se ha enviado. Intentalo de nuevo. Sino, escribeme a <a href="#" onclick="alert('Puedes contactarme en esta dirección: me@jgferreiro.com ¡Tengo ganas de leer tu mail!'); return false;">Mostrar mail</a>
 
 				form(action='/mail', method='post')
 					

@@ -98,7 +98,39 @@
 				color:rgba(0,0,0,.3);
 
 .messageSent
+	// -ms-transform: translate(-50%,-50%); /* IE 9 */
+	// -webkit-transform: translate(-50%,-50%); /* Safari */
+	// transform: translate(-50%,-50%);
+	background:#539A53;
+	width:100%;
+	text-align:center;
+	// position:fixed;
 	display:none;
+	z-index:200;
+	padding:1em 0;
+	// left:50%;
+	// top:50%;
+	margin-top:1.5em;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px; 
+	
+	&-warning
+		background:#E81F1F;
+	.whiteBackground
+		width: 100%;
+		height:100%;
+		position:fixed;
+		left:0;
+		top:0;
+		z-index:50;
+		content:'';
+		background:rgba(255,255,255, 0.6);
+	
+	p
+		margin:0 1.5em;
+		color:#fff;
 
 .contactLoader
 	width: 100%;
@@ -164,7 +196,6 @@
 		}
 	&-select
 		margin-right:1em;
-		padding:0.5em 1em;
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px;
@@ -183,7 +214,7 @@
 		
 		@media all and (min-width:desktopWidth) {
 			width:200px;
-			height:40px;
+			height:48px;
 			text-indent:15px; 
 		}
 		 
