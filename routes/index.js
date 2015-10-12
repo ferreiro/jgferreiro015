@@ -58,9 +58,8 @@ router.post('/contact', function(req, res) {
 	    error: false
 	}  
 
-	res.json({ 
-	    data: form          // We pass the form object we created before
-	}); 
+	res.json({"error": false}); // We pass the form object we created before
+ 
 });
 /*
 router.post('/contact2', function (req, res, next) {
