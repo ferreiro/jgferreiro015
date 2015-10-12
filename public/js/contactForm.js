@@ -23,14 +23,14 @@ $('#contactForm').submit(function(event){
         "time" : $('select[name="time"]').val(),
         "plan" : $('select[name="plan"]').val()
     }
-    
+
     validName = isValidField(data.name, 0);
     validEmail = isValidEmail(data.email);
 
     if (validName && validEmail) {
 
         $.ajax({
-            type        : 'post',       // define the type of HTTP verb we want to use (POST for our form)
+            type        : 'POST',       // define the type of HTTP verb we want to use (POST for our form)
             url         : '/mail', // the url where we want to POST
             dataType    : 'json',       // what type of userData do we expect back from the server
             data        : data,     // our userData object
@@ -61,8 +61,9 @@ $('#contactForm').submit(function(event){
 
     }
     else {
-        errorClass = "contactFieldset-input-error";
         
+        errorClass = "contactFieldset-input-error";
+
         name.removeClass(errorClass);
         email.removeClass(errorClass);
 
@@ -72,6 +73,10 @@ $('#contactForm').submit(function(event){
         if (!validEmail) {
             email.addClass(errorClass); 
         }
+
+        $('html, body').animate({ 
+            scrollTop: $('#contactForm').offset().top
+        }, 'slow');
     }
     
 
