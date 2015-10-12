@@ -157,7 +157,12 @@
 			box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.4);
 	&-unified
 		min-width:300px;
-	&-select 
+		// background:transparent !important;
+		@media all and (min-width:desktopWidth) {
+			width:635px !important;
+			margin-right:0 !important;
+		}
+	&-select
 		margin-right:1em;
 		padding:0.5em 1em;
 		-webkit-border-radius: 3px;
@@ -168,15 +173,20 @@
 		//border:1px solid #cecece;
 		background:#fff;
 		
-
 		@media all and (max-width:tabletWidth) {
 			padding-left:0;
 			text-indent: 20px;
 			padding-right:0;
 			margin-bottom:1em;
 			width:100% !important;
-		} 
+		}
 		
+		@media all and (min-width:desktopWidth) {
+			width:200px;
+			height:40px;
+			text-indent:15px; 
+		}
+		 
 		&:focus
 			-webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
 			-moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.4);

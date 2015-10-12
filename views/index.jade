@@ -135,7 +135,7 @@ block content
 
 			.contact-form(style="display:none;")#contactForm
 				// h1 Tu por aquí, ¡Qué alegría!
-				p ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás por madrid (o planeas venir), elegir la opción de tomar algo. Cuando envíes el formulario te responderé concretando el encuentro ¡Hasta ahora!
+				p(style="margin-bottom:1em;") ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás por madrid (o planeas venir), elegir la opción de tomar algo. Cuando envíes el formulario te responderé concretando el encuentro ¡Hasta ahora!
 
 				form(action='/mail', method='post')
 					
@@ -199,7 +199,7 @@ block content
 							option(value='11') November
 							option(value='12') December
 						
-						select(name="year", required).contactFieldset-select
+						select(name="year", required).contactFieldset-select(style="margin-right:0;")
 							option(value='2015') 2015
 							option(value='2016') 2016
 

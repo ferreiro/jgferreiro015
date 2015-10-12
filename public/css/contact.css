@@ -172,6 +172,12 @@
 .contactFieldset-unified {
   min-width: 300px;
 }
+@media all and (min-width: desktopWidth) {
+  .contactFieldset-unified {
+    width: 635px !important;
+    margin-right: 0 !important;
+  }
+}
 .contactFieldset-select {
   margin-right: 1em;
   padding: 0.5em 1em;
@@ -189,6 +195,13 @@
     padding-right: 0;
     margin-bottom: 1em;
     width: 100% !important;
+  }
+}
+@media all and (min-width: desktopWidth) {
+  .contactFieldset-select {
+    width: 200px;
+    height: 40px;
+    text-indent: 15px;
   }
 }
 .contactFieldset-select:focus {
