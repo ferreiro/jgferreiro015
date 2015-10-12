@@ -51,11 +51,10 @@ router.post('/mail', function (req, res) {
     	subject: 'Tomar algo con Jorge',
         name: req.body.name,
         email: req.body.email,
-        day: req.body.day,
-        month: req.body.month,
-        year: req.body.year,
+        date: req.body.date,
         time: req.body.time,
-        type: req.body.type
+        plan: req.body.plan,
+        error: "message sent"
     } 
 
 
@@ -74,10 +73,9 @@ router.post('/mail', function (req, res) {
 	mailMSG += '<p style="font-size:16px;">';
 	mailMSG += 'Nombre: '   + form.name +'<br /> ';
 	mailMSG += 'Email: ' + form.email + '<br />';
-	mailMSG += 'Day: '    + form.day + '<br />';
-	mailMSG += 'Month: '    + form.month + '<br />';
-	mailMSG += 'Year: '    + form.year + '<br />';
-	mailMSG += 'Type: '    + form.type + '<br />';
+	mailMSG += 'Date: '    + form.date + '<br />'; 
+	mailMSG += 'Time: '    + form.time + '<br />'; 
+	mailMSG += 'Plan: '    + form.plan + '<br />';
 	mailMSG += '</p>'; 
 	mailMSG += '</body></html>';
 
@@ -92,12 +90,13 @@ router.post('/mail', function (req, res) {
 
 	// Send mail with defined transport object
 	transporter.sendMail(mailOptions, function(error, info) {
-		err = error; // False: email sent. True: error on sending email
+		if (error){
+			form.error = "Message not sent, error."; // True: error on the email | false: everything is ok
+		}
 	});
     	  
     // Devolver JSON para cuando se haga un formulario ajax.
     res.json({ 
-        mailError: err,           // There wasn't any error
         messageData: form          // We pass the form object we created before
     });  
     

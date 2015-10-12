@@ -1,6 +1,54 @@
+$('form').submit(function(event) {
+
+    alert("yooo")
+    var name, email, date, time, plan; // input data.
+
+    event.preventDefault()
+
+    name  = $('input[name="name"]').val();
+    email = $('input[name="email"]').val();
+    date  = $('input[name="date"]').val();
+    time  = $('select[name="time"]').val();
+    plan  = $('select[name="plan"]').val();
+
+    data = {
+        "name" : name,
+        "email" : email,
+        "date" : date,
+        "time" : time,
+        "plan" : plan
+    }
+
+    $('#formLoader').show(0);
+    $('#contactForm').hide(0);
+
+    $.ajax({
+        type        : 'POST',       // define the type of HTTP verb we want to use (POST for our form)
+        url         : '/mail', // the url where we want to POST
+        data        : data,     // our data object
+        dataType    : 'json',       // what type of data do we expect back from the server
+        encode      : true
+    })
+    .done(function(returnedData) {  
+        $('#messageSuccess').show(0)    
+        alert("mensaje enviado!")
+
+    })
+    .fail(function(returnedData) {
+        $('#messageFailure').show(0)
+        $('#contactForm').show(0);  // show the form again
+    })
+    .always(function(returnedData) {
+        $('#formLoader').hide(0);
+    });
+
+    return false; 
+
+}); 
+
  
     // process the form
-    $('form.contactForm').submit(function(event) {
+    $('fsdfsdfsdfsdfsdfsdfsd').submit(function(event) {
     	var formData, validEmail, emptyField;
     	var name, email, phone, subject, message;
         var inputs = new Array();

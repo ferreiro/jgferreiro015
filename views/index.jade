@@ -37,14 +37,11 @@ block content
 				// Placed the content
 				.content-bio
 					h3.subtitle ¿Quién soy yo?
-					p.paragraph ¡Hola! Soy Jorge Ferreiro, <b>programador</b> full-stack<sup>1</sup> y <b>estudiante</b> de Ingeniería Informática. 
-					p.paragraph Trabajo como freelance diseñando páginas web, APIs y aplicaciones web desde cero. También puedo involucrarme a tiempo parcial. 
-					
-					p.paragraph Soy autodidacta, siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Las tres cualidades que destaco son: capacidad de aprender, constancia y pasión por lo que hago.
 
-					p.paragraph Sí, ¡me gustan los retos y cumplir objetivos!. En mi tiempo libre (no mucho la verdad) disfruto produzciendo música y tomando fotografías. 
-					
-					p.paragraph <sup>1</sup> Con el término Full-stack, me refiero a que puedo desarrollar tanto la parte visual de una web (frontend), como todo lo que hay detras: páginas, modelos, rutas, bases de datos... Lo que se conoce como backend, vaya.
+					p.paragraph ¡Hola! Soy Jorge Ferreiro, <b>programador</b> full-stack y <b>estudiante</b> de Ingeniería Informática. Con el término Full-stack, me refiero a que puedo desarrollar tanto la parte visual de una web (frontend), como todo lo que hay detras: páginas, modelos, rutas, bases de datos... Lo que se conoce como backend, vaya.
+					p.paragraph Trabajo como freelance diseñando páginas web, APIs y aplicaciones web desde cero. También puedo involucrarme a tiempo parcial. En mi tiempo libre (no mucho la verdad) produzco música y tomo fotografías.
+					p.paragraph Soy autodidacta desde pequeño. Siempre me he buscado la vida para aprender una nueva tecnología, un lenguaje de programación o cualquier cosa. Las tres aptitudes que destaco son: capacidad de aprender, constancia y pasión por lo que hago. 
+					p.paragraph Sí, ¡me gustan los retos y cumplir objetivos!.
 
 	if(special)
 		div(style="width:300px; height:150px; position:fixed; right:0; bottom:0; z-index:100;")
@@ -127,101 +124,53 @@ block content
 					.contactBox-rounds-box
 						<img src="assets/icons/skype.svg">
 				
-			.contact-form(style="display:none;")
-				h1 Tu por aquí, ¡Qué alegría!
-				p ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás en madrid o planeas venir, elegir la opción de tomar algo. Cuando envíes el formulario te cuento más al otro lado, ¡Hasta ahora!
+			.messageSent#messageSuccess
+				p Tu mensaje ha sido enviado con éxito, gracias!
+			.messageSent#messageFailure
+				p Tu mensaje ha sido enviado con éxito, gracias!
 
-				form(action='/mail', name='contactus', method='post', novalidate).contactForm
-					fieldset.contact-form-field
-						p.contact-form-field-text Nombre <span>* (obligatorio, al menos 2 caracteres)</span>
-						.contact-form-field-element
-							//- keepInputValue class will keep the input value via javascript
-							input.keepInputValue(type='name', name='name', placeholder='¿Cómo te llamas?' required).contact-form-name
+
+			#formLoader
+				.contactLoader
+
+			.contact-form(style="display:none;")#contactForm
+				// h1 Tu por aquí, ¡Qué alegría!
+				p ¡Genial!, te cuento. Puedes elegir una fecha que te venga bien para hablar por skype o si estás por madrid (o planeas venir), elegir la opción de tomar algo. Cuando envíes el formulario te responderé concretando el encuentro ¡Hasta ahora!
+
+				form(action='/mail', method='post')
 					
-					fieldset.contact-form-field
-						p.contact-form-field-text Email <span>* (obligatorio)</span>
-						.contact-form-field-element
-							//- keepInputValue class will keep the input value via javascript
-							input.keepInputValue(type='email', name='email', placeholder='¿A qué correo te puedo responder?' required).contact-form-field-element-input 
+					fieldset.contactFieldset
+						// legend Nombre * (obligatorio, al menos 2 caracteres)
+						label(for="the_name").contactFieldset-label Nombre
+						input(type='name', id='the_name', name='name', placeholder='¿Cómo te llamas?', required).contactFieldset-input
 					
-					fieldset.contact-form-field.contact-form-field-subject
-						p.contact-form-field-text ¿Qué día te viene bien? <span>(Ejemplo 16 de Abril)</span>
-						.contact-form-field-element
-							select(name="day", required).contact-form-field-element-select
-								<option value='01'>01</option>
-								<option value='02'>02</option>
-								<option value='03'>03</option>
-								<option value='04'>04</option>
-								<option value='05'>05</option>
-								<option value='06'>06</option>
-								<option value='07'>07</option>
-								<option value='08'>08</option>
-								<option value='09'>09</option>
-								<option value='10'>10</option>
-								<option value='11'>11</option>
-								<option value='12'>12</option>
-								<option value='13'>13</option>
-								<option value='14'>14</option>
-								<option value='15'>15</option>
-								<option value='16'>16</option>
-								<option value='17'>17</option>
-								<option value='18'>18</option>
-								<option value='19'>19</option>
-								<option value='20'>20</option>
-								<option value='21'>21</option>
-								<option value='22'>22</option>
-								<option value='23'>23</option>
-								<option value='24'>24</option>
-								<option value='25'>25</option>
-								<option value='26'>26</option>
-								<option value='27'>27</option>
-								<option value='28'>28</option>
-								<option value='29'>29</option>
-								<option value='30'>30</option>
-								<option value='31'>31</option>
-							</select>
+					fieldset.contactFieldset
+						// legend Email * (te responderé a esta dirección)
+						label(for="email").contactFieldset-label  Email
+						input(type='email', id='email', name='email', placeholder='¿Cual es tu email?', required).contactFieldset-input
 
-							select(name="month", required)
-								<option value='01'>January</option>
-								<option value='02'>February</option>
-								<option value='03'>March</option>
-								<option value='04'>April</option>
-								<option value='05'>May</option>
-								<option value='06'>June</option>
-								<option value='07'>July</option>
-								<option value='08'>August</option>
-								<option value='09'>September</option>
-								<option value='10'>October</option>
-								<option value='11'>November</option>
-								<option value='12'>December</option>
-			
-							select(name="year", required)
-								<option value='2015'>2015</option>
-								<option value='2016'>2016</option>
+					fieldset.contactFieldset
+						// legend ¿Qué día te viene bien? (Ejemplo 16 de Abril)
+						label(for="date").contactFieldset-label  Día
+						input(type='date', id='date', name='date', placeholder='¿Cómo te llamas?', required).contactFieldset-input
 
-					fieldset.contact-form-field.contact-form-field-message
-						p.contact-form-field-text Elige una hora <span>(*)</span>
-						.contact-form-field-element
-							//- keepInputValue class will keep the input value via javascript
+					fieldset.contactFieldset
+						// legend Elige una hora
+						label(for="time").contactFieldset-label  Hora
+						select(name="time", id="time", required).contactFieldset-input
+							option(value="--:--") --:--
+							option(value="20:30") 20:30
+							option(value="21:00") 21:00
+							option(value="Otra") ¿Puede ser en otro momento?
 
-						select(name="time", required)
-							<option value='--:--'>--:--</option>
-							<option value='Otra'>¿Puede ser en otro momento?</option>
-							<option value='20:00'>20:00</option>
-							<option value='20:30'>20:30</option>
-							<option value='21:00'>21:00</option>
+					fieldset.contactFieldset
+						label(for="plan").contactFieldset-label Plan
+						select(name="plan", id="plan", required).contactFieldset-input
+							option(value="skype") Skype/Hangouts
+							option(value="coffe") Tomar algo en madrid
 
-					fieldset.contact-form-field.contact-form-field-message
-						p.contact-form-field-text Oye, entonces hemos quedado que tu eras de...?
-						.contact-form-field-element
-							//- keepInputValue class will keep the input value via javascript
-
-						select(name="type", required)
-							<option value='Tomar algo'>Tomar algo</option>
-							<option value='Skype'>Skype/Hangouts</option> 
-
-					fieldset.contact-form-field.contact-form-field-button(style="padding:1.5em 0; text-align:center;")
-						input(type="submit", value="¡Mandarlo!").button(style="padding:0.5em 1em;")
+					fieldset.contactFieldset(style="text-align:center;")
+						input(type="submit", value="¡Mandarlo!").contactFieldset-submit
 
 			div#initialContactLayer
 				p Llegados a este punto, solo me queda decirte <b>dos cosas</b>... La primera, darte las <b>gracias</b> por visitar mi web. La segunda, invitarte a conectarnos. Ya sea porque tienes un proyecto, buscas freelance o te molaría compartir algo... Abajo te he puesto dos botones para que eligas. Si te va más lo social, hablamos por <a href="http://twitter.com/jgferreiro" target="_blank">twitter</a> ;). 
