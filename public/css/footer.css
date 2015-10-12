@@ -14,3 +14,7 @@
   text-align: center;
   display: inline-block;
 }
+.footer-middle h5 {
+  color: #cecece;
+  color: rgba(0,0,0,0.5);
+}
