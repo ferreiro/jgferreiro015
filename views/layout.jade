@@ -29,8 +29,11 @@ html
 		link(href='https://fonts.googleapis.com/css?family=Lora|Lato|Martel|Kadwa', rel='stylesheet', type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic', rel='stylesheet', type='text/css')
 		link(rel="stylesheet", href="css/normalize.css")
-		link(rel="stylesheet", href="css/styles.css?v=1.0")
-		
+		link(rel="stylesheet", href="css/styles.css")
+
+		if page == "university"
+			link(rel="stylesheet", href="css/university.css")
+
 	body
 		.mobile-wrapper
 			block content

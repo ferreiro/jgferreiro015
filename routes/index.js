@@ -13,7 +13,17 @@ var router = express.Router();
 
 router.get( '/:var(es)?' , function(req, res, next) {
 	res.render('index', {
+		page: "index",
 		title: 'Jorge Ferreiro - Programador full stack - Backend / frontend - node, javascript, less.js, jade. ',
+		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
+		special : false
+	});
+});
+
+router.get( '/university' , function(req, res, next) {
+	res.render('university', {
+		page: "university",
+		title: 'University - Jorge Ferreiro - Computer science student and programmer.',
 		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
 		special : false
 	});
