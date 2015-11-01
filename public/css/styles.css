@@ -142,7 +142,6 @@ a:hover {
   height: 75px;
   margin: 0 auto;
   position: absolute;
-  display: none;
   left: 0;
 }
 .menuTop-logo-image {
@@ -387,6 +386,12 @@ a:hover {
     width: 750px;
     margin: 0 auto;
   }
+}
+.sectionHeader {
+  background-color: #e8edf1;
+  background-position: 50% 50%;
+  margin-top: 75px;
+  text-align: center;
 }
 .bigHeader {
   height: 200px;

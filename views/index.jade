@@ -2,26 +2,11 @@ extends layout
 
 block content
 
-	.loader
-
-	// Menu
-	.menuTop
-		.menuTop-int
-			.menuTop-logo
-				a(href='/')
-					span.menuTop-logo-image(title='Jorge Ferreiro')
-
-			.menuTop-box
-				ul.menuTop-languages
-					li
-						a(href="#", onclick="alert('Hi! Sorry, but the webpage is not avaliable yet in english. However, we recommend you to use the google translator. Sorry for the inconvenience :(');") <img src="assets/images/englishUSA_LONDON.svg" height="16px" /> <span>English?</span>
-
-
 	// A container is the basic structure of the webpage.
 	// Dicides the content in different blocks. Each container has a inner div, which allows you to place content respecting the webpage width Eg: 1000px
 
 	// Main header wallpaper with the background
-	section.container.bigHeader
+	section.container.bigHeader(style="background-image: url(../images/jorge_ferreiro_small.jpg);")
 		.container-int
 			// Placed the content
 			.bigHeader-logo

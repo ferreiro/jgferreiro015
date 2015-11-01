@@ -2,27 +2,11 @@ extends layout
 
 block content
 
-	.loader
-
-	// Menu
-	.menuTop
-		.menuTop-int
-			.menuTop-logo
-				a(href='/')
-					span.menuTop-logo-image(title='Jorge Ferreiro')
-
-			.menuTop-box
-				ul.menuTop-languages
-					li
-						a(href="#", onclick="alert('Hi! Sorry, but the webpage is not avaliable yet in english. However, we recommend you to use the google translator. Sorry for the inconvenience :(');") <img src="assets/images/englishUSA_LONDON.svg" height="16px" /> <span>English?</span>
-
 	// Main header wallpaper with the background
-	section.container.bigHeader(style="height:50px; overflow:hidden;")
+	section.container.sectionHeader
 		.container-int
 			// Placed the content
-			.bigHeader-logo
-				a(href="/", title="Full stack Developer")
-					h2(class="bigHeader-logo-subtext") University program
+			h2(class="bigHeader-logo-subtext", style="margin-top:10px;") University program
 
 	// Main header wallpaper with the background
 	section.container#about
@@ -30,13 +14,15 @@ block content
 
 				// Placed the content
 
-				p explicar que hay estoy en el itinerario de computación.
-					| Poner enlace al diptico (avisar que está en español).
-					| Incluir aviso para las fichas docentes. "course sillabous"
+				p I'm attending course <strong>3</strong> out 4 on <strong>computer engineering</strong> at <strong>UCM</strong> (Universidad Complutense de Madrid: ucm.es). My branch is called "Tecnología Específica de Computación" (Computation). My degree is bilingual so subjects are taugh in english and spanish. See <u><a href="https://www.ucm.es/data/cont/docs/titulaciones/49.pdf" target="_blank">diptic</a></u> (in spanish) for more information.
+
+				p.course-advise
+					span.course-advise-close#closeSillabousAlert ok
+					| Please, take into account that "Course sillabous" are written mainly in spanish but there's also an english translation in the same file. Scroll down until you find "Programa detallado en inglés" to see the english version of the program.
 
 				.course
 
-					h3.subtitle First year (2013-2014)
+					h3.subtitle First year <span>(October 2013 - June 2014)</span>
 					// p.paragraph <b> Basic subjects</b>
 
 					ul.course-subjects
@@ -87,7 +73,7 @@ block content
 								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=220", target="_blank").course-subjects-entry-link
 
 				.course
-					h3.subtitle Second year (2014-2015)
+					h3.subtitle Second year <span>(October 2014 - June 2015)</span>
 
 					ul
 						li.course-subjects-entry
@@ -151,7 +137,7 @@ block content
 								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=415", target="_blank").course-subjects-entry-link
 
 				.course
-					h3.subtitle Third year (2015-2016)
+					h3.subtitle Third year <span>(October 2015 - June 2016)</span>
 					// p.paragraph <b> Mandatory subjects</b>
 
 					ul
@@ -199,7 +185,7 @@ block content
 					// p.paragraph <b> Computational itinerary subjects</b> 
 
 
-					p.paragraph <b> Free choice subjects</b>
+					p.paragraph <b>Free choice subjects</b>
 					ul
 
 						li.course-subjects-entry
@@ -218,35 +204,46 @@ block content
 								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=778", target="_blank").course-subjects-entry-link
 
 
-				.course#notCoursing
-					h3.subtitle Forth year (2016-2017)
-					// p.paragraph <b> Mandatory subjects</b>
+				.course
 
-					ul
-						//li.course-subjects-entry
-						//	span.course-subjects-entry-tags.english-tag English course 
-						//	p.course-subjects-entry-title
+					h3.subtitle Forth year (October 2016 - June 2017)
+					
+					p Take into account that Course Sillabous and subjects information for "2015-2016 course" is <b>not avaliable yet</b> (Last checked: November 2015). This information will be updated when my university upload it (normally in july of 2016).
+					
+					p If I finally go to an erasmus, will update this information.
 
-						//		| Ethics, Legislation and Profession
+					ul.course-subjects
 
-						//		a(href="#", title="Link is not avaliable yet", target="_blank").course-subjects-entry-link
-						
-						//li.course-subjects-entry
-						//	span.course-subjects-entry-tags.english-tag English course 
-						//	p.course-subjects-entry-title
+						#notCoursing
+							span Coursing next year
 
-						//		| Computer Architecture
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+								| Computer Architecture *
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=708", target="_blank").course-subjects-entry-link
 
-						//		a(href="#", title="Link is not avaliable yet", target="_blank").course-subjects-entry-link
-						
-						//li.course-subjects-entry
-						//	span.course-subjects-entry-tags.english-tag English course 
-						//	p.course-subjects-entry-title
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+								| Ampliation of Operating Systems and Networks *
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=709", target="_blank").course-subjects-entry-link
 
-						//		| Ampliation of Operating Systems and Networks
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+								| Ethics, Legislation and Profession *
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=715", target="_blank").course-subjects-entry-link
 
-						//		a(href="#", title="Link is not avaliable yet" target="_blank").course-subjects-entry-link
-						
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Language Processors
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=710", target="_blank").course-subjects-entry-link
 
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Interactive Systems Development
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=745", target="_blank").course-subjects-entry-link
 
-
+						p.paragraph <b>Free choice subjects</b>
+						p.paragraph I have to choose 4 subjetcs. Not decided yet until finishing current course (3). Will update this field by July 2016.
