@@ -7,7 +7,7 @@ block content
 	// Menu
 	.menuTop
 		.menuTop-int
-			.menuTop-logo(style="display:block !important;")
+			.menuTop-logo
 				a(href='/')
 					span.menuTop-logo-image(title='Jorge Ferreiro')
 
@@ -24,7 +24,6 @@ block content
 				a(href="/", title="Full stack Developer")
 					h2(class="bigHeader-logo-subtext") University program
 
-
 	// Main header wallpaper with the background
 	section.container#about
 		.container-int
@@ -35,10 +34,10 @@ block content
 					| Poner enlace al diptico (avisar que está en español).
 					| Incluir aviso para las fichas docentes. "course sillabous"
 
-				.content-bio
+				.course
 
 					h3.subtitle First year (2013-2014)
-					p.paragraph <b> Mandatory subjects</b>
+					// p.paragraph <b> Basic subjects</b>
 
 					ul.course-subjects
 
@@ -47,14 +46,14 @@ block content
 							p.course-subjects-entry-title 
 
 								| Fundamentals of Programming
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=223", target="_blank") Course sillabous
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=223", target="_blank").course-subjects-entry-link
 
 						li.course-subjects-entry
 							span.course-subjects-entry-tags.english-tag English course 
 							p.course-subjects-entry-title
 
 								| Introduction to computers
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=224", target="_blank") Course sillabous
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=224", target="_blank").course-subjects-entry-link
 
 						li.course-subjects-entry
 							
@@ -62,14 +61,14 @@ block content
 							p.course-subjects-entry-title
 
 								| Mathematical methods for engineering
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=221", target="_blank") Course sillabous
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=221", target="_blank").course-subjects-entry-link
 
 						li.course-subjects-entry
 							span.course-subjects-entry-tags.english-tag English course 
 							p.course-subjects-entry-title
 
-								|Discrete Mathematics and Mathematical Logic 
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=222", target="_blank") Course sillabous
+								| Discrete Mathematics and Mathematical Logic 
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=222", target="_blank").course-subjects-entry-link
 
 						li.course-subjects-entry
 
@@ -77,68 +76,127 @@ block content
 							p.course-subjects-entry-title
 
 								| Business Management
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=219", target="_blank") Course sillabous
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=219", target="_blank").course-subjects-entry-link
 
 						li.course-subjects-entry
 
 							span.course-subjects-entry-tags.english-tag English course
 							p.course-subjects-entry-title
 
-								| Introduction to the concepts of electricity and electronics 
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=220", target="_blank") Course sillabous
+								| Introduction to electricity and electronics 
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=220", target="_blank").course-subjects-entry-link
 
-
-
-				.content-bio
+				.course
 					h3.subtitle Second year (2014-2015)
 
-					p.paragraph <b> Mandatory subjects</b>
 					ul
 						li.course-subjects-entry
-							p.course-subjects-entry-title Fundamentals of Programming 
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=223", target="_blank") Course sillabous
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
 
-					p.paragraph <b> Computational itinerary subjects</b>
-					ul
-						
+								| Computer Programming Technology
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=424", target="_blank").course-subjects-entry-link
+
 						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
 
+								| Computer Organization
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=422", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Data structures and algorithms
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=423", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Technology and Organization of Computer Systems
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=412", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Software Engineering
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=425", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Advanced Mathematics
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=413", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Probability and Statistics
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=414", target="_blank").course-subjects-entry-link
+
+
+					// p.paragraph <b>Computational itinerary subjects</b>
+
+					ul
+						li.course-subjects-entry
 							span.course-subjects-entry-tags.spanish-tag Spanish course
 							p.course-subjects-entry-title
 
 								| Foundations of computer languages
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=218", target="_blank") Course sillabous
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=415", target="_blank").course-subjects-entry-link
 
-
-					p.paragraph <b> Free choice subjects</b>
-					ul
-
-						li.course-subjects-entry
-
-							span.course-subjects-entry-tags.spanish-tag Spanish course
-							p.course-subjects-entry-title
-
-								| Foundations of computer languages
-								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=218", target="_blank") Course sillabous
-
-
-				.content-bio
+				.course
 					h3.subtitle Third year (2015-2016)
-					p.paragraph <b> Mandatory subjects</b>
+					// p.paragraph <b> Mandatory subjects</b>
 
 					ul
 						li.course-subjects-entry
-							span.course-subjects-entry-tags.spanish-tag Spanish course
-							p.course-subjects-entry-title Name
-								a(href="", target="_blank") Course sillabous
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
 
-					p.paragraph <b> Computational itinerary subjects</b>
-					ul
+								| Operating Systems
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=716", target="_blank").course-subjects-entry-link
 						
 						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Databases
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=718", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.english-tag English course 
+							p.course-subjects-entry-title
+
+								| Computer networks
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=717", target="_blank").course-subjects-entry-link
+ 
+						li.course-subjects-entry
 							span.course-subjects-entry-tags.spanish-tag Spanish course
-							p.course-subjects-entry-title Name
-								a(href="", target="_blank") Course sillabous
+							p.course-subjects-entry-title Concurrent Programming
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=711", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Declarative Programming
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=712", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Algorithmic Methods for Solving Problems
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=713", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Artificial Intelligence
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=714", target="_blank").course-subjects-entry-link
+								
+					// p.paragraph <b> Computational itinerary subjects</b> 
 
 
 					p.paragraph <b> Free choice subjects</b>
@@ -146,8 +204,49 @@ block content
 
 						li.course-subjects-entry
 							span.course-subjects-entry-tags.spanish-tag Spanish course
-							p.course-subjects-entry-title Name
-								a(href="", target="_blank") Course sillabous
+							p.course-subjects-entry-title Data Mining and Big Data paradigm
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=776", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Web Information Management
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=778", target="_blank").course-subjects-entry-link
+
+						li.course-subjects-entry
+							span.course-subjects-entry-tags.spanish-tag Spanish course
+							p.course-subjects-entry-title Computer Networks Security <i>(attending as a listener)</i>
+								a(href="http://www.fdi.ucm.es/Pub/ImpresoFichaDocente.aspx?Id=778", target="_blank").course-subjects-entry-link
+
+
+				.course#notCoursing
+					h3.subtitle Forth year (2016-2017)
+					// p.paragraph <b> Mandatory subjects</b>
+
+					ul
+						//li.course-subjects-entry
+						//	span.course-subjects-entry-tags.english-tag English course 
+						//	p.course-subjects-entry-title
+
+						//		| Ethics, Legislation and Profession
+
+						//		a(href="#", title="Link is not avaliable yet", target="_blank").course-subjects-entry-link
+						
+						//li.course-subjects-entry
+						//	span.course-subjects-entry-tags.english-tag English course 
+						//	p.course-subjects-entry-title
+
+						//		| Computer Architecture
+
+						//		a(href="#", title="Link is not avaliable yet", target="_blank").course-subjects-entry-link
+						
+						//li.course-subjects-entry
+						//	span.course-subjects-entry-tags.english-tag English course 
+						//	p.course-subjects-entry-title
+
+						//		| Ampliation of Operating Systems and Networks
+
+						//		a(href="#", title="Link is not avaliable yet" target="_blank").course-subjects-entry-link
+						
 
 
 
