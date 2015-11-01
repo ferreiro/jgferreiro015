@@ -722,25 +722,25 @@ a:hover {
   vertical-align: top;
 }
 .contactBox-coffeSkype-coffee {
-  background-color: rgba(179,130,76,0.8);
+  background: rgba(179,53,53,0.8);
 }
 .contactBox-coffeSkype-coffee p:before {
-  content: 'Do you want my resume?';
+  content: 'Interested in reading my resume?';
 }
 .contactBox-coffeSkype-coffee:hover {
-  background-color: rgba(179,130,76,0.8);
+  background: rgba(179,53,53,0.8);
 }
 .contactBox-coffeSkype-coffee:hover p:before {
-  content: 'Yes! Download it!';
+  content: 'Yes, download it!';
 }
 .contactBox-coffeSkype-skype {
-  background: rgba(179,53,53,0.8);
+  background-color: rgba(179,130,76,0.8);
 }
 .contactBox-coffeSkype-skype p:before {
-  content: 'Skype / hangout conference';
+  content: 'Do we talk via skype/hangout?';
 }
 .contactBox-coffeSkype-skype:hover {
-  background: rgba(179,53,53,0.8);
+  background-color: rgba(179,130,76,0.8);
 }
 .contactBox-coffeSkype-skype:hover p:before {
   content: 'Organise a call!';
