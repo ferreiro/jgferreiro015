@@ -1,3 +1,6 @@
+.footer {
+  border-top: 1px solid #f4f4f4;
+}
 .footer-left {
   display: inline-block;
 }

@@ -1,8 +1,27 @@
-$('.open-contactForm').click(function() {
+$('.open-contactFormDownload').click(function() {
+
+    $('#initialContactLayer').slideUp(0);
+    $('.contact-form').fadeIn("600");
+
+    $('#AppoitmentForm').hide(0);
     $('html, body').animate({ 
         scrollTop: $('#contact').offset().top
     }, 'slow');
+
+    return false;
 });
+
+$('.open-contactFormSkype').click(function() {
+
+    $('.contact-form').fadeIn("600");
+    $('#initialContactLayer').fadeOut("600");
+    $('html, body').animate({ 
+        scrollTop: $('#contact').offset().top
+    }, 'slow');
+
+    return false;
+});
+
 
 $('form').submit(function(event){
     var data, email, name;

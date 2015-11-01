@@ -1,0 +1,130 @@
+extends layout
+
+block content
+
+	// A container is the basic structure of the webpage.
+	// Dicides the content in different blocks. Each container has a inner div, which allows you to place content respecting the webpage width Eg: 1000px
+
+	// Main header wallpaper with the background
+	section.container.bigHeader(style="background-image: url(../images/jorge_ferreiro_small.jpg); margin-top:0;")
+		.container-int
+			// Placed the content
+			.bigHeader-logo
+				a(href="/", title="Full stack Developer")
+					span(class="bigHeader-logo-image", title="Jorge Ferreiro")
+					h1(class="bigHeader-logo-text") Jorge Ferreiro
+					h2(class="bigHeader-logo-subtext") Computer Science student &amp; Programmer
+
+	section#contact.container.contact(style="margin-top:-20px;")
+		.container-int
+ 
+			.messageSent#messageSuccess
+				// .whiteBackground
+				p <span id="userName"></span> Tu mensaje ha sido enviado con éxito. Te respondo en cuanto pueda a tu correo <span id="userMail"></span>
+
+			#formLoader
+				.contactLoader
+
+			.contact-form(style="display:none;")#contactForm
+				
+				// h1 Tu por aquí, ¡Qué alegría!
+
+				.messageSent.messageSent-warning#messageFailure(style="margin-bottom:2em;")
+					p Tu mensaje no se ha enviado. Intentalo de nuevo. Si el error persiste, por favor escribeme a <a href="#" onclick="alert('Puedes contactarme en esta dirección: me@jgferreiro.com ¡Tengo ganas de leer tu mail!'); return false;">Mostrar mail</a>
+
+				form(action='/contact', method='post')
+					
+					fieldset.contactFieldset
+						// legend Nombre * (obligatorio, al menos 2 caracteres)
+						label(for="the_name").contactFieldset-label Name
+						input(type='name', id='the_name', name='name', placeholder="Tell me your name, please.").contactFieldset-input
+					
+					fieldset.contactFieldset
+						// legend Email * (te responderé a esta dirección)
+						label(for="email").contactFieldset-label  Email
+						input(type='name', id='email', name='email', placeholder="What's your email?", required).contactFieldset-input
+
+					#AppoitmentForm
+						fieldset.contactFieldset
+							// legend ¿Qué día te viene bien? (Ejemplo 16 de Abril)
+							label(for="day").contactFieldset-label  Date
+							select(name="day", id="day", required).contactFieldset-select
+								option(value='01') 01
+								option(value='02') 02
+								option(value='03') 03
+								option(value='04') 04
+								option(value='05') 05
+								option(value='06') 06
+								option(value='07') 07
+								option(value='08') 08
+								option(value='09') 09
+								option(value='10') 10
+								option(value='11') 11
+								option(value='12') 12
+								option(value='13') 13
+								option(value='14') 14
+								option(value='15') 15
+								option(value='16') 16
+								option(value='17') 17
+								option(value='18') 18
+								option(value='19') 19
+								option(value='20') 20
+								option(value='21') 21
+								option(value='22') 22
+								option(value='23') 23
+								option(value='24') 24
+								option(value='25') 25
+								option(value='26') 26
+								option(value='27') 27
+								option(value='28') 28
+								option(value='29') 29
+								option(value='30') 30
+								option(value='31') 31
+
+							select(name="month", required).contactFieldset-select
+								option(value='January') January
+								option(value='February') February
+								option(value='March') March
+								option(value='April') April
+								option(value='May') May
+								option(value='June') June
+								option(value='July') July
+								option(value='August') August
+								option(value='September') September
+								option(value='October') October
+								option(value='November') November
+								option(value='December') December
+							
+							select(name="year", style="margin-right:0;", required).contactFieldset-select
+								option(value='2015') 2015
+								option(value='2016') 2016
+
+
+						fieldset.contactFieldset
+							// legend Elige una hora
+							label(for="time").contactFieldset-label  Time
+							select(name="time", id="time", required).contactFieldset-select.contactFieldset-unified
+								option(value="--:--") --:--
+								option(value="20:30") 20:30
+								option(value="21:00") 21:00
+								option(value="Otra") Is better for me other time.
+
+						fieldset.contactFieldset
+							label(for="plan").contactFieldset-label Plan
+							select(name="plan", id="plan", required).contactFieldset-select.contactFieldset-unified
+								option(value="skype") Skype/Hangouts
+								option(value="coffe") Take a coffe in Madrid
+
+					fieldset.contactFieldset(style="text-align:center;")
+						input(type="submit", value="Sent email!").contactFieldset-submit
+
+			div#initialContactLayer
+				p(style="margin-top:0;") Hello! I'm Jorge Ferreiro, programmer and <a href="/university"><u>Computer science student</u></a>. I'm working on my website.  Meanwhile, you can download my resume, make a conference call or follow my work. Click one of the links below!
+
+				.contactBox-coffeSkype
+					a(href="#", class="contactBox-coffeSkype-coffee").open-contactFormDownload
+						p <!-- Texts are placed via :before on css -->
+					span o
+					a(href="#", class="contactBox-coffeSkype-skype").open-contactFormSkype
+						p <!-- Texts are placed via :before on css -->
+

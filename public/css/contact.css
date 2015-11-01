@@ -39,25 +39,25 @@
   background-color: rgba(179,130,76,0.8);
 }
 .contactBox-coffeSkype-coffee p:before {
-  content: '¿Eres más de tomar algo...?';
+  content: 'Do you want my resume?';
 }
 .contactBox-coffeSkype-coffee:hover {
   background-color: rgba(179,130,76,0.8);
 }
 .contactBox-coffeSkype-coffee:hover p:before {
-  content: 'Soy más de tomar algo...';
+  content: 'Yes! Download it!';
 }
 .contactBox-coffeSkype-skype {
   background: rgba(179,53,53,0.8);
 }
 .contactBox-coffeSkype-skype p:before {
-  content: '¿...O te va más el rollo skype?';
+  content: 'Skype / hangout conference';
 }
 .contactBox-coffeSkype-skype:hover {
   background: rgba(179,53,53,0.8);
 }
 .contactBox-coffeSkype-skype:hover p:before {
-  content: '...me va más el rollo skype';
+  content: 'Organise a call!';
 }
 .contactBox-coffeSkype a {
   width: 47%;

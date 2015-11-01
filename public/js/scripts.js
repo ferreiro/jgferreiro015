@@ -54,9 +54,3 @@ openGeekMessage1.click(function() {
 	alert("Tioooo, eres super geek ehh");
 	return false;
 });
-
-$('.contactBox-coffeSkype a').click(function() {
-	$('.contact-form').fadeIn("600");
-	$('#initialContactLayer').fadeOut("600");
-	return false;
-});

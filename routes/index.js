@@ -11,8 +11,17 @@ var router = express.Router();
 // I use a REGEX when / and /es will load the same spanish view.
 // http://stackoverflow.com/questions/15350025/multiple-routes-single-function-call-express-js
 
-router.get( '/:var(es)?' , function(req, res, next) {
-	res.render('index', {
+router.get('/:var(en)?', function(req, res, next) {
+	res.render('index_comingsoon_EN', {
+		page: 'index',
+		title: 'Jorge Ferreiro - Programmer - Backend / frontend - node, javascript, less.js, jade. ',
+		description : 'Programmer. Node, javascript, HTML5, CSS3, JQuery. Backend developer and frontend developer',
+		special : false
+	});
+});
+
+router.get( '/es' , function(req, res, next) {
+	res.render('index_comingsoon_ES', {
 		page: "index",
 		title: 'Jorge Ferreiro - Programador full stack - Backend / frontend - node, javascript, less.js, jade. ',
 		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
@@ -29,13 +38,6 @@ router.get( '/university' , function(req, res, next) {
 	});
 });
 
-router.get('/en', function(req, res, next) {
-	res.render('index_english', {
-		title: 'Jorge Ferreiro - Full-stack programmer - Backend / frontend - node, javascript, less.js, jade. ',
-		description : 'Full-stack programmer. Node, javascript, HTML5, CSS3, JQuery. Backend developer and frontend developer',
-		special : false
-	});
-});
 
 router.get( '/en/contact' , function(req, res, next) {
 	res.render('contact', {
