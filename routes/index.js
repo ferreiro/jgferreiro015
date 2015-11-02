@@ -37,6 +37,14 @@ router.get( '/university' , function(req, res, next) {
 		special : false
 	});
 });
+router.get( '/app-stadistics' , function(req, res, next) {
+	res.render('app-stadistics', {
+		page: "stadistics",
+		title: 'App stadistics - Jorge Ferreiro - Computer science student and programmer.',
+		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
+		special : false
+	});
+});
 
 
 router.get( '/en/contact' , function(req, res, next) {
