@@ -21,7 +21,7 @@ router.get('/:var(en)?', function(req, res, next) {
 });
 
 router.get( '/es' , function(req, res, next) {
-	res.render('index_comingsoon_ES', {
+	res.render('index', {
 		page: "index",
 		title: 'Jorge Ferreiro - Programador full stack - Backend / frontend - node, javascript, less.js, jade. ',
 		description : 'Full stack programmer. Node, javascript, HTML5, CSS3, JQuery. Desarrollador frontend y backend',
